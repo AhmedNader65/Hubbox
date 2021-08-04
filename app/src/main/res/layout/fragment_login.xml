@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gredient"
+        tools:context=".ui.auth.LoginFragment">
+
+        <ImageView
+            android:id="@+id/onBoardingImg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_login"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            app:layout_constraintBottom_toTopOf="@id/loginTitle"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/loginTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:fontFamily="@font/manrope_bold"
+            android:lines="2"
+            android:text="@string/on_boarding1"
+            android:textAlignment="center"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/_22ssp"
+            app:layout_constraintBottom_toTopOf="@+id/loginDesc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/loginDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_22sdp"
+            android:fontFamily="@font/manrope_bold"
+            android:lines="2"
+            android:text="@string/on_boarding1_desc"
+            android:textAlignment="center"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toTopOf="@+id/phoneNumberLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/phoneNumberLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:background="@drawable/bg_white_with_stroke"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintBottom_toTopOf="@id/orContinueBy">
+
+            <Spinner
+                android:id="@+id/sCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:minHeight="0dp"
+                android:spinnerMode="dropdown"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/item_country_dropdown" />
+
+            <TextView
+                android:id="@+id/countryCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:text="+ 971   |"
+                android:textColor="@color/dark_grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/sCountry"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/submitPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="@dimen/_4sdp"
+                app:backgroundTint="@color/purple"
+                app:icon="@drawable/ic_baseline_arrow_forward_24"
+                app:iconPadding="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/phoneEntry"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@null"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:maxLength="11"
+                android:fontFamily="@font/manrope_bold"
+                android:inputType="phone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/submitPhone"
+                app:layout_constraintStart_toEndOf="@id/countryCode"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/half_line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/orContinueBy"
+            app:layout_constraintEnd_toStartOf="@id/orContinueBy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/orContinueBy" />
+
+        <View
+            android:id="@+id/half_line2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/orContinueBy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/orContinueBy"
+            app:layout_constraintTop_toTopOf="@id/orContinueBy" />
+
+        <TextView
+            android:id="@+id/orContinueBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:fontFamily="@font/manrope_bold"
+            android:text="@string/or_continue_with"
+            app:layout_constraintBottom_toTopOf="@id/facebookLogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/facebookLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:elevation="@dimen/_400sdp"
+            android:fontFamily="@font/manrope_bold"
+            android:minHeight="@dimen/_46sdp"
+            android:text="Facebook"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/white"
+            app:cornerRadius="@dimen/_8sdp"
+            app:elevation="@dimen/_400sdp"
+            app:icon="@drawable/ic_facebook"
+            app:iconTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/googleLogin"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/googleLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:fontFamily="@font/manrope_bold"
+            android:minHeight="@dimen/_46sdp"
+            android:text="Google"
+            android:textColor="@color/black"
+            app:backgroundTint="@color/white"
+            app:cornerRadius="@dimen/_8sdp"
+            app:icon="@drawable/ic_google_login"
+            app:iconTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/facebookLogin" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

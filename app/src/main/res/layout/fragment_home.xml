@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/purple">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imgContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_24sdp"
+                    app:cardCornerRadius="@dimen/_200sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/placeholder_prof" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/hello"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:fontFamily="@font/manrope_medium"
+                    android:text="@string/hello"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintStart_toEndOf="@id/imgContainer"
+                    app:layout_constraintTop_toTopOf="@id/imgContainer" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:fontFamily="@font/manrope_bold"
+                    android:text="Ibrahim"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_24ssp"
+                    app:layout_constraintStart_toEndOf="@id/imgContainer"
+                    app:layout_constraintTop_toBottomOf="@id/hello" />
+
+                <ImageView
+                    android:id="@+id/notifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:src="@drawable/ic_notification_bell"
+                    app:layout_constraintBottom_toBottomOf="@id/imgContainer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/imgContainer" />
+
+
+                <Button
+                    android:id="@+id/search_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:background="@drawable/bg_white_corner_round"
+                    android:minWidth="0dp"
+                    android:paddingStart="@dimen/_12sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingEnd="@dimen/_12sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:src="@drawable/ic_search"
+                    app:backgroundTint="@color/white"
+                    app:icon="@drawable/ic_search"
+                    app:iconPadding="0dp"
+                    app:iconTint="@null"
+                    app:layout_constraintBottom_toBottomOf="@id/searchTI"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:lines="2"
+                    android:minLines="2"
+                    android:text="@string/what_service_are_you_looking_for"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_24ssp"
+                    app:autoSizeMaxTextSize="100sp"
+                    app:autoSizeStepGranularity="2sp"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintEnd_toStartOf="@id/notifications"
+                    app:layout_constraintStart_toStartOf="@id/imgContainer"
+                    app:layout_constraintTop_toBottomOf="@id/imgContainer" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/searchTI"
+                    style="@style/Widget.App.TextInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:hint="@string/search"
+                    android:padding="0dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:layout_constraintEnd_toStartOf="@+id/search_btn"
+                    app:layout_constraintStart_toStartOf="@id/title"
+                    app:layout_constraintTop_toBottomOf="@id/title"
+                    app:startIconDrawable="@drawable/ic_path">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/manrope_medium"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="@drawable/bg_top_round_lavandar"
+                    android:padding="@dimen/_16sdp"
+                    app:layout_constraintTop_toBottomOf="@id/searchTI">
+
+                    <TextView
+                        android:id="@+id/servicesLB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_services"
+                        android:textColor="@color/purple"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/services"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/servicesLB">
+
+                        <LinearLayout
+                            android:id="@+id/shipping"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_4sdp"
+                            android:layout_weight=".3"
+                            android:background="@drawable/bg_white_corner_round"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_8sdp">
+
+                            <ImageView
+                                android:id="@+id/shippingIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/ic_shipping_home" />
+
+                            <TextView
+                                android:id="@+id/shippingTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:fontFamily="@font/manrope_extrabold"
+                                android:lines="1"
+                                android:maxLines="1"
+                                android:src="@drawable/ic_shipping_home"
+                                android:text="@string/shipping"
+                                android:textColor="@color/purple"
+                                android:textSize="@dimen/_10sdp"
+                                app:autoSizeTextType="uniform" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/manrope_medium"
+                                android:text="@string/shippingDesc"
+                                android:textAlignment="center"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:src="@drawable/ic_view" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".7"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_4sdp"
+                                android:background="@drawable/bg_white_corner_round"
+                                android:layoutDirection="rtl"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/_8sdp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end|bottom"
+                                    android:layout_marginTop="@dimen/_4sdp"
+                                    android:src="@drawable/ic_view" />
+
+                                <ImageView
+                                    android:id="@+id/recoveryIcon"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/ic_recovery_home" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="@string/recovery"
+                                        android:textAlignment="center"
+                                        android:textColor="#D2205E" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/manrope_medium"
+                                        android:text="@string/recovery_desc"
+                                        android:textAlignment="center"
+                                        android:textSize="@dimen/_10ssp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_4sdp"
+                                android:background="@drawable/bg_white_corner_round"
+                                android:layoutDirection="rtl"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/_8sdp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="end|bottom"
+                                    android:layout_marginTop="@dimen/_4sdp"
+                                    android:src="@drawable/ic_view" />
+
+                                <ImageView
+                                    android:id="@+id/movingIcon"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/ic_movers_home" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="@string/movers_amp_packers"
+                                        android:textAlignment="center"
+                                        android:textColor="#3EA8BF" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/manrope_medium"
+                                        android:text="@string/moving_desc"
+                                        android:textAlignment="center"
+                                        android:textSize="@dimen/_10ssp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ordersInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:background="@drawable/bg_grey_corner_round"
+                        android:padding="@dimen/_8sdp"
+                        app:layout_constraintTop_toBottomOf="@id/services">
+
+                        <TextView
+                            android:id="@+id/amountOfTasks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/activeOrders"
+                            android:textColor="@color/purple"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/progress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_medium"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:text="22 of 50 Orders Finished"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/amountOfTasks" />
+
+                        <ProgressBar
+                            android:id="@+id/progressbar"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:indeterminateOnly="false"
+                            android:progress="70"
+                            android:progressDrawable="@drawable/circularprogressbar"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+
+                            android:id="@+id/text_progress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="30%"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_7ssp"
+                            app:layout_constraintBottom_toBottomOf="@+id/progressbar"
+                            app:layout_constraintEnd_toEndOf="@+id/progressbar"
+                            app:layout_constraintStart_toStartOf="@+id/progressbar"
+                            app:layout_constraintTop_toTopOf="@+id/progressbar" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/orderCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_minus10sdp"
+                        app:cardCornerRadius="@dimen/_16sdp"
+                        app:cardElevation="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        app:layout_constraintTop_toBottomOf="@id/ordersInfo">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_8sdp">
+
+                            <ImageView
+                                android:id="@+id/img24hours"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_24hours"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/orderId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:fontFamily="@font/manrope_semibold"
+                                android:text="Order Id: #d4872694"
+                                android:textColor="#4E4E4E"
+                                app:layout_constraintBottom_toBottomOf="@id/img24hours"
+                                app:layout_constraintStart_toEndOf="@id/img24hours"
+                                app:layout_constraintTop_toTopOf="@id/img24hours" />
+
+                            <ImageView
+                                android:id="@+id/more"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_more_vert_24"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:tint="@color/dark_grey" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/orderPartnerImgContainer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_16sdp"
+                                app:cardCornerRadius="@dimen/_4sdp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/orderId">
+
+                                <ImageView
+                                    android:id="@+id/orderPartnerImg"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/placeholder_order_partner" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/orderPartnerName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:alpha=".8"
+                                android:text="From: Shomokh Market"
+                                android:textColor="@color/purple"
+                                app:layout_constraintStart_toEndOf="@id/orderPartnerImgContainer"
+                                app:layout_constraintTop_toTopOf="@id/orderPartnerImgContainer" />
+
+                            <TextView
+                                android:id="@+id/type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/manrope_light"
+                                android:text="Clothes 2.5 kg"
+                                android:textColor="@color/black"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                app:layout_constraintStart_toEndOf="@id/orderPartnerImgContainer"
+                                app:layout_constraintTop_toBottomOf="@id/orderPartnerName" />
+
+                            <ProgressBar
+                                android:id="@+id/progressBar1"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_marginTop="@dimen/_16sdp"
+                                android:layout_marginEnd="@dimen/_4sdp"
+                                android:progress="70"
+                                android:progressDrawable="@drawable/progressbar"
+                                app:layout_constraintEnd_toStartOf="@+id/progressPercent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/type" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:gravity="center"
+                                android:text="Out for Delivery"
+                                app:layout_constraintBottom_toBottomOf="@+id/progressBar1"
+                                app:layout_constraintEnd_toEndOf="@+id/progressBar1"
+                                app:layout_constraintStart_toStartOf="@+id/progressBar1"
+                                app:layout_constraintTop_toTopOf="@+id/progressBar1" />
+
+                            <TextView
+                                android:id="@+id/progressPercent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="90%"
+                                app:layout_constraintBottom_toBottomOf="@id/progressBar1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/progressBar1" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_16sdp"
+                                android:background="@drawable/bg_grey_bottom_corner_round"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                app:layout_constraintTop_toBottomOf="@id/progressBar1">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/ic_delivering_by" />
+
+                                    <TextView
+                                        app:autoSizeTextType="uniform"
+                                        android:layout_marginStart="@dimen/_4sdp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Car" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="start"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/ic_cost" />
+
+                                    <TextView
+                                        app:autoSizeTextType="uniform"
+                                        android:layout_marginStart="@dimen/_4sdp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/manrope_extrabold"
+                                        android:text="600 AED" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/ic_estimated_time" />
+
+                                    <LinearLayout
+                                        android:layout_marginStart="@dimen/_4sdp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:lines="1"
+                                            android:text="Est. Arrival , 28 Sep 2020"
+                                            android:textSize="@dimen/_10ssp"
+                                            app:autoSizeTextType="uniform" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:lines="1"
+                                            app:autoSizeTextType="uniform"
+                                            android:text="5:00 PM -7:30 Pm"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_10ssp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

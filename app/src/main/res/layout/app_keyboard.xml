@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F7FC"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_key_view"
+                android:fontFamily="@font/manrope_medium"
+                android:text="1"
+                android:textColor="@color/dark_grey"
+                android:textSize="35sp"
+                app:backgroundTint="#F8F7FC" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_key_view"
+                android:fontFamily="@font/manrope_medium"
+                android:text="2"
+                android:textColor="@color/dark_grey"
+                android:textSize="35sp"
+                app:backgroundTint="#F8F7FC" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_key_view"
+                android:fontFamily="@font/manrope_medium"
+                android:text="3"
+                android:textColor="@color/dark_grey"
+                android:textSize="35sp"
+                app:backgroundTint="#F8F7FC" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_key_view"
+                android:fontFamily="@font/manrope_medium"
+                android:text="4"
+                android:textColor="@color/dark_grey"
+                android:textSize="35sp"
+                app:backgroundTint="#F8F7FC" />
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_key_view"
+                android:fontFamily="@font/manrope_medium"
+                android:text="5"
+                android:textColor="@color/dark_grey"
+                android:textSize="35sp"
+                app:backgroundTint="#F8F7FC" />
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_key_view"
+                android:fontFamily="@font/manrope_medium"
+                android:text="6"
+                android:textColor="@color/dark_grey"
+                android:textSize="35sp"
+                app:backgroundTint="#F8F7FC" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_key_view"
+                android:fontFamily="@font/manrope_medium"
+                android:text="7"
+                android:textColor="@color/dark_grey"
+                android:textSize="35sp"
+                app:backgroundTint="#F8F7FC" />
+
+            <Button
+                android:id="@+id/btn8"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_key_view"
+                android:fontFamily="@font/manrope_medium"
+                android:text="8"
+                android:textColor="@color/dark_grey"
+                android:textSize="35sp"
+                app:backgroundTint="#F8F7FC" />
+
+            <Button
+                android:id="@+id/btn9"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_key_view"
+                android:fontFamily="@font/manrope_medium"
+                android:text="9"
+                android:textColor="@color/dark_grey"
+                android:textSize="35sp"
+                app:backgroundTint="#F8F7FC" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/empty"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_key_view"
+                android:fontFamily="@font/manrope_medium"
+                android:textColor="@color/dark_grey"
+                android:textSize="35sp"
+                app:backgroundTint="#F8F7FC" />
+
+            <Button
+                android:id="@+id/btn0"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_key_view"
+                android:fontFamily="@font/manrope_medium"
+                android:text="0"
+                android:textColor="@color/dark_grey"
+                android:textSize="35sp"
+                app:backgroundTint="#F8F7FC" />
+
+            <ImageButton
+                android:id="@+id/delete"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@drawable/keyboard_key_view"
+                android:fontFamily="@font/manrope_medium"
+                android:src="@drawable/ic_delete_char"
+                android:textColor="@color/dark_grey"
+                android:textSize="35sp"
+                app:backgroundTint="#F8F7FC" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

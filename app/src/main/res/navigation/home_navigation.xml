@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation.xml"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.hubbox.ui.home.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navigation_my_orders"
+        android:name="com.hubbox.ui.home.myorders.MyOrdersFragment"
+        android:label="MyOrdersFragment"
+        tools:layout="@layout/fragment_my_orders" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.hubbox.ui.home.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
