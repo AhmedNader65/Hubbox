@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation.xml"
+    app:startDestination="@id/pickupLocationFragment">
+
+    <fragment
+        android:id="@+id/pickupLocationFragment"
+        tools:layout="@layout/fragment_pickup_address"
+        android:name="com.hubbox.ui.home.createShipment.pickupLocation.PickupLocationFragment"
+        android:label="PickupLocationFragment" >
+        <action
+            android:id="@+id/action_pickupLocationFragment_to_pickupContactFragment"
+            app:destination="@id/pickupContactFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pickupContactFragment"
+        tools:layout="@layout/fragment_pickup_contact"
+        android:name="com.hubbox.ui.home.createShipment.pickupContact.PickupContactFragment"
+        android:label="PickupContactFragment" >
+        <action
+            android:id="@+id/action_pickupContactFragment_to_dropoffFragment"
+            app:destination="@id/dropoffFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dropoffFragment"
+        tools:layout="@layout/fragment_dropoff_address"
+        android:name="com.hubbox.ui.home.createShipment.dropOff.DropoffFragment"
+        android:label="DropoffFragment" />
+</navigation>

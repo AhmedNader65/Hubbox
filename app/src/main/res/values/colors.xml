@@ -4,7 +4,15 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#111A2C</color>
+    <color name="selected_green">#CAEFFF</color>
+    <color name="unselected_card">#F7F8FB</color>
+    <color name="lavandar_200">#F5F2FF</color>
+    <color name="stroke_grey">#DBDBDB</color>
+    <color name="lavendar">#E9E6F4</color>
+    <color name="my_orders_bg">#F7F8FB</color>
     <color name="dark_grey">#484848</color>
     <color name="white">#FFFFFFFF</color>
     <color name="colorLightGrey">#BDBDBD</color>
+    <color name="fushia">#D43169</color>
+    <color name="fusheia">#BBC0F1</color>
 </resources>

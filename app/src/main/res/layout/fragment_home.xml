@@ -156,7 +156,7 @@
                         <LinearLayout
                             android:id="@+id/shipping"
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_margin="@dimen/_4sdp"
                             android:layout_weight=".3"
                             android:background="@drawable/bg_white_corner_round"
@@ -203,13 +203,14 @@
 
                         <LinearLayout
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_weight=".7"
                             android:orientation="vertical">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
                                 android:layout_margin="@dimen/_4sdp"
                                 android:background="@drawable/bg_white_corner_round"
                                 android:layoutDirection="rtl"
@@ -256,7 +257,8 @@
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
                                 android:layout_margin="@dimen/_4sdp"
                                 android:background="@drawable/bg_white_corner_round"
                                 android:layoutDirection="rtl"
@@ -356,211 +358,15 @@
                             app:layout_constraintTop_toTopOf="@+id/progressbar" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/orderCard"
+                    <com.yuyakaido.android.cardstackview.CardStackView
+                        android:id="@+id/card_stack_view"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/_200sdp"
+                        app:layout_constraintTop_toBottomOf="@id/ordersInfo"
                         android:layout_marginTop="@dimen/_minus10sdp"
-                        app:cardCornerRadius="@dimen/_16sdp"
-                        app:cardElevation="@dimen/_10sdp"
-                        android:layout_marginBottom="@dimen/_8sdp"
-                        app:layout_constraintTop_toBottomOf="@id/ordersInfo">
+                        android:clipToPadding="true">
+                    </com.yuyakaido.android.cardstackview.CardStackView>
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:padding="@dimen/_8sdp">
-
-                            <ImageView
-                                android:id="@+id/img24hours"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/ic_24hours"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                android:id="@+id/orderId"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/_8sdp"
-                                android:fontFamily="@font/manrope_semibold"
-                                android:text="Order Id: #d4872694"
-                                android:textColor="#4E4E4E"
-                                app:layout_constraintBottom_toBottomOf="@id/img24hours"
-                                app:layout_constraintStart_toEndOf="@id/img24hours"
-                                app:layout_constraintTop_toTopOf="@id/img24hours" />
-
-                            <ImageView
-                                android:id="@+id/more"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:src="@drawable/ic_baseline_more_vert_24"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:tint="@color/dark_grey" />
-
-                            <androidx.cardview.widget.CardView
-                                android:id="@+id/orderPartnerImgContainer"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/_16sdp"
-                                app:cardCornerRadius="@dimen/_4sdp"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/orderId">
-
-                                <ImageView
-                                    android:id="@+id/orderPartnerImg"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:src="@drawable/placeholder_order_partner" />
-                            </androidx.cardview.widget.CardView>
-
-                            <TextView
-                                android:id="@+id/orderPartnerName"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/_8sdp"
-                                android:alpha=".8"
-                                android:text="From: Shomokh Market"
-                                android:textColor="@color/purple"
-                                app:layout_constraintStart_toEndOf="@id/orderPartnerImgContainer"
-                                app:layout_constraintTop_toTopOf="@id/orderPartnerImgContainer" />
-
-                            <TextView
-                                android:id="@+id/type"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/manrope_light"
-                                android:text="Clothes 2.5 kg"
-                                android:textColor="@color/black"
-                                android:layout_marginStart="@dimen/_8sdp"
-                                app:layout_constraintStart_toEndOf="@id/orderPartnerImgContainer"
-                                app:layout_constraintTop_toBottomOf="@id/orderPartnerName" />
-
-                            <ProgressBar
-                                android:id="@+id/progressBar1"
-                                style="?android:attr/progressBarStyleHorizontal"
-                                android:layout_width="0dp"
-                                android:layout_height="@dimen/_30sdp"
-                                android:layout_marginTop="@dimen/_16sdp"
-                                android:layout_marginEnd="@dimen/_4sdp"
-                                android:progress="70"
-                                android:progressDrawable="@drawable/progressbar"
-                                app:layout_constraintEnd_toStartOf="@+id/progressPercent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/type" />
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="0dp"
-                                android:gravity="center"
-                                android:text="Out for Delivery"
-                                app:layout_constraintBottom_toBottomOf="@+id/progressBar1"
-                                app:layout_constraintEnd_toEndOf="@+id/progressBar1"
-                                app:layout_constraintStart_toStartOf="@+id/progressBar1"
-                                app:layout_constraintTop_toTopOf="@+id/progressBar1" />
-
-                            <TextView
-                                android:id="@+id/progressPercent"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="90%"
-                                app:layout_constraintBottom_toBottomOf="@id/progressBar1"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintTop_toTopOf="@id/progressBar1" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/_16sdp"
-                                android:background="@drawable/bg_grey_bottom_corner_round"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal"
-                                app:layout_constraintTop_toBottomOf="@id/progressBar1">
-
-                                <LinearLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:orientation="horizontal">
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:src="@drawable/ic_delivering_by" />
-
-                                    <TextView
-                                        app:autoSizeTextType="uniform"
-                                        android:layout_marginStart="@dimen/_4sdp"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Car" />
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:gravity="start"
-                                    android:orientation="horizontal">
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:src="@drawable/ic_cost" />
-
-                                    <TextView
-                                        app:autoSizeTextType="uniform"
-                                        android:layout_marginStart="@dimen/_4sdp"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="@font/manrope_extrabold"
-                                        android:text="600 AED" />
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="2"
-                                    android:gravity="center"
-                                    android:orientation="horizontal">
-
-                                    <ImageView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:src="@drawable/ic_estimated_time" />
-
-                                    <LinearLayout
-                                        android:layout_marginStart="@dimen/_4sdp"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:orientation="vertical">
-
-                                        <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:lines="1"
-                                            android:text="Est. Arrival , 28 Sep 2020"
-                                            android:textSize="@dimen/_10ssp"
-                                            app:autoSizeTextType="uniform" />
-
-                                        <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:lines="1"
-                                            app:autoSizeTextType="uniform"
-                                            android:text="5:00 PM -7:30 Pm"
-                                            android:textColor="@color/black"
-                                            android:textSize="@dimen/_10ssp" />
-
-                                    </LinearLayout>
-
-                                </LinearLayout>
-                            </LinearLayout>
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </androidx.cardview.widget.CardView>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>

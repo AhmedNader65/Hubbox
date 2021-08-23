@@ -20,4 +20,17 @@
         android:name="com.hubbox.ui.home.profile.ProfileFragment"
         android:label="ProfileFragment"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/myProfileFragment"
+        android:name="com.hubbox.ui.home.myProfile.MyProfileFragment"
+        android:label="MyProfileFragment" />
+    <fragment
+        android:id="@+id/createShipmentFragment"
+        tools:layout="@layout/fragment_new_shipment"
+        android:name="com.hubbox.ui.home.createShipment.CreateShipmentFragment"
+        android:label="CreateShipmentFragment" />
+    <fragment
+        android:id="@+id/shipmentInfoEntryFragment"
+        android:name="com.hubbox.ui.home.createShipment.shipmentEntry.ShipmentInfoEntryFragment"
+        android:label="ShipmentInfoEntryFragment" />
 </navigation>

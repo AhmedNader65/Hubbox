@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.hubbox.R
@@ -27,6 +28,9 @@ class ProfileFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_profile, container, false)
         val mRootView = binding.getRoot()
 
+        binding.myProfile.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.myProfileFragment)
+        }
         return mRootView
     }
 }

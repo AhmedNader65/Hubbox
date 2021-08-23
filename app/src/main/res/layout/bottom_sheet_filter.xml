@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_16sdp"
+        app:behavior_hideable="true"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_close_24"
+            app:tint="@color/purple"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="Service"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+
+            android:id="@+id/shipping"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@drawable/selector_checkbox"
+            android:text="Shipping"
+            android:paddingStart="@dimen/_5sdp"
+            app:layout_constraintEnd_toStartOf="@id/recovery"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title2" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/recovery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@drawable/selector_checkbox"
+            android:text="Recovery"
+            android:paddingStart="@dimen/_5sdp"
+            app:layout_constraintEnd_toStartOf="@id/movers"
+            app:layout_constraintStart_toEndOf="@+id/shipping"
+            app:layout_constraintTop_toBottomOf="@id/title2" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/movers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@drawable/selector_checkbox"
+            android:text="Movers"
+            android:paddingStart="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/recovery"
+            app:layout_constraintTop_toBottomOf="@id/title2" />
+
+        <TextView
+            android:id="@+id/title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="Status"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/movers" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cancelled"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@drawable/selector_checkbox"
+            android:text="Cancelled"
+            android:paddingStart="@dimen/_5sdp"
+            app:layout_constraintEnd_toStartOf="@id/completed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title3" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/completed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@drawable/selector_checkbox"
+            android:text="Completed"
+            android:paddingStart="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cancelled"
+            app:layout_constraintTop_toBottomOf="@id/title3" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/rescheduled"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@drawable/selector_checkbox"
+            android:text="Rescheduled"
+            android:paddingStart="@dimen/_5sdp"
+            app:layout_constraintEnd_toStartOf="@id/delivered"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cancelled" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/delivered"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@drawable/selector_checkbox"
+            android:text="Delivered"
+            android:paddingStart="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/rescheduled"
+            app:layout_constraintTop_toBottomOf="@id/cancelled" />
+
+
+        <Button
+            android:id="@+id/active"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:padding="@dimen/_16sdp"
+            android:stateListAnimator="@null"
+            android:text="Apply Filter"
+            android:textAllCaps="false"
+            app:cornerRadius="@dimen/_8sdp"
+            app:elevation="0dp"
+            app:layout_constraintTop_toBottomOf="@id/delivered"
+            app:layout_goneMarginTop="@dimen/_16sdp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
