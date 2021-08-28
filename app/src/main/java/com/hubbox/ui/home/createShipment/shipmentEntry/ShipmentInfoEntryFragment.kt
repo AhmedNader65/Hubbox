@@ -27,6 +27,7 @@ import com.hubbox.databinding.*
 import com.hubbox.model.Day
 import com.hubbox.model.Spot
 import com.hubbox.model.Vehicle
+import com.hubbox.ui.home.createShipment.CreateShipmentFragment
 
 
 class ShipmentInfoEntryFragment : Fragment() {
@@ -60,7 +61,9 @@ class ShipmentInfoEntryFragment : Fragment() {
         binding.parcel.setOnClickListener {
             checkParcelLayout()
         }
-
+        binding.confirm.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.shipmentConfirmationFragment)
+        }
         binding.asap.setOnClickListener { checkASAP() }
         binding.nineToTwelve.setOnClickListener { checkNineAm() }
         binding.oneToThree.setOnClickListener { checkOnePM() }

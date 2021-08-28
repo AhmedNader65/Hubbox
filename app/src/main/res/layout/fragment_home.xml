@@ -109,8 +109,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_16sdp"
                     android:layout_marginEnd="@dimen/_8sdp"
-                    android:hint="@string/search"
                     android:padding="0dp"
+                    app:hintEnabled="false"
                     app:boxBackgroundColor="@color/white"
                     app:layout_constraintEnd_toStartOf="@+id/search_btn"
                     app:layout_constraintStart_toStartOf="@id/title"
@@ -120,6 +120,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:hint="@string/search"
                         android:fontFamily="@font/manrope_medium"
                         android:maxLines="1"
                         android:singleLine="true" />

@@ -22,6 +22,7 @@
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/myProfileFragment"
+        tools:layout="@layout/fragment_my_profile"
         android:name="com.hubbox.ui.home.myProfile.MyProfileFragment"
         android:label="MyProfileFragment" />
     <fragment
@@ -31,6 +32,18 @@
         android:label="CreateShipmentFragment" />
     <fragment
         android:id="@+id/shipmentInfoEntryFragment"
+        tools:layout="@layout/fragment_shipment_info"
         android:name="com.hubbox.ui.home.createShipment.shipmentEntry.ShipmentInfoEntryFragment"
         android:label="ShipmentInfoEntryFragment" />
+    <fragment
+        android:id="@+id/shipmentConfirmationFragment"
+        tools:layout="@layout/fragment_shipment_confirmation"
+        android:name="com.hubbox.ui.home.createShipment.confirmation.ShipmentConfirmationFragment"
+        android:label="ShipmentConfirmationFragment" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        tools:layout="@layout/fragment_change_password"
+        android:name="com.hubbox.ui.home.myProfile.ChangePasswordFragment"
+        android:label="ChangePasswordFragment" />
+
 </navigation>

@@ -15,19 +15,21 @@
         <entry key="..\:/android/Hubbox/app/src/main/res/drawable/selector_checkbox.xml" value="0.2203125" />
         <entry key="..\:/android/Hubbox/app/src/main/res/layout/bottom_sheet_filter.xml" value="0.18" />
         <entry key="..\:/android/Hubbox/app/src/main/res/layout/bottom_sheet_pickup_address.xml" value="0.22" />
+        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_change_password.xml" value="0.18" />
         <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_dropoff_address.xml" value="0.25" />
+        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_edit_profile.xml" value="0.17527173913043478" />
         <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_login.xml" value="0.10371376811594203" />
         <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_my_orders.xml" value="0.24561403508771928" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_my_profile.xml" value="0.10371376811594203" />
+        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_my_profile.xml" value="0.40370370370370373" />
         <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_new_shipment.xml" value="0.14" />
         <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_on_boarding.xml" value="0.18885869565217392" />
         <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_parent_home.xml" value="0.1" />
         <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_pickup_address.xml" value="0.17" />
         <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_pickup_contact.xml" value="0.25" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_profile.xml" value="0.12" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_shipment_confirmation.xml" value="0.22" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_shipment_info.xml" value="0.13" />
+        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
+        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_shipment_confirmation.xml" value="0.2" />
+        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_shipment_info.xml" value="0.15481832543443919" />
         <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_side_menu.xml" value="0.18885869565217392" />
         <entry key="..\:/android/Hubbox/app/src/main/res/layout/item_day.xml" value="0.5" />
         <entry key="..\:/android/Hubbox/app/src/main/res/layout/item_order_card.xml" value="0.19701086956521738" />

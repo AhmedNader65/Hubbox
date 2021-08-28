@@ -28,21 +28,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/back" />
 
-        <Button
-            android:id="@+id/edit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_16sdp"
-            android:minWidth="0dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:text="Edit"
-            android:textColor="@color/white"
-            app:cornerRadius="@dimen/_32sdp"
-            app:layout_constraintBottom_toBottomOf="@id/back"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/back" />
-
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"

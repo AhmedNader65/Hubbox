@@ -3,86 +3,492 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:background="#F7F8FB">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/root"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/_16sdp"
-                android:src="@drawable/ic_baseline_arrow_back_24"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Summary And Payment"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="@id/back"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/back" />
-
-            <TextView
-                android:id="@+id/orderId"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_16sdp"
-                android:layout_marginTop="@dimen/_16sdp"
-                android:text="Order Id: #d4872694"
-                android:textColor="@color/purple"
-                android:textSize="@dimen/_14ssp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/title" />
         <ImageView
+            android:id="@+id/back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_shipment_package"
-            app:layout_constraintTop_toBottomOf="@id/orderId"
+            android:padding="@dimen/_16sdp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="@dimen/_16sdp"
-            android:layout_marginTop="@dimen/_16sdp"
-            android:id="@+id/pkgImg"/>
-            <TextView
-                android:id="@+id/orderDesc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_16sdp"
-                android:text="25 Kg Medium parcel"
-                android:textSize="@dimen/_13ssp"
-                android:textColor="@color/purple"
-                app:layout_constraintStart_toEndOf="@+id/pkgImg"
-                app:layout_constraintTop_toTopOf="@id/pkgImg" />
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/weight"
-                android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Summary And Payment"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@id/back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/back" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintTop_toBottomOf="@id/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/white">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rootCard"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_16sdp"
-                android:text="Weight 5Kg"
-                app:layout_constraintStart_toEndOf="@+id/pkgImg"
-                app:layout_constraintTop_toBottomOf="@id/orderDesc"
-                app:layout_constraintBottom_toTopOf="@id/sku"
-                />
-            <TextView
-                android:id="@+id/sku"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_16sdp"
-                android:text="SKU: 21796885695"
-                app:layout_constraintStart_toEndOf="@+id/pkgImg"
-                app:layout_constraintBottom_toBottomOf="@id/pkgImg" />
-        <TextV
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+                app:cardBackgroundColor="@color/white"
+
+                app:cardCornerRadius="@dimen/_16sdp"
+                app:cardElevation="0dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/root"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/orderId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:text="Order Id: #d4872694"
+                        android:textColor="@color/purple"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_16sdp"
+                        app:cardBackgroundColor="#F7F8FB"
+
+                        app:cardCornerRadius="@dimen/_16sdp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintTop_toBottomOf="@id/orderId">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cardRoot"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/_16sdp"
+                            app:layout_constraintTop_toBottomOf="@id/title">
+
+                            <ImageView
+                                android:id="@+id/pkgImg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16sdp"
+                                android:layout_marginTop="@dimen/_16sdp"
+                                android:src="@drawable/ic_shipment_package"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/orderDesc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16sdp"
+                                android:text="25 Kg Medium parcel"
+                                android:textColor="@color/purple"
+                                android:textSize="@dimen/_13ssp"
+                                app:layout_constraintStart_toEndOf="@+id/pkgImg"
+                                app:layout_constraintTop_toTopOf="@id/pkgImg" />
+
+                            <TextView
+                                android:id="@+id/weight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16sdp"
+                                android:text="Weight 5Kg"
+                                app:layout_constraintBottom_toTopOf="@id/sku"
+                                app:layout_constraintStart_toEndOf="@+id/pkgImg"
+                                app:layout_constraintTop_toBottomOf="@id/orderDesc" />
+
+                            <TextView
+                                android:id="@+id/quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16sdp"
+                                android:layout_marginEnd="16dp"
+                                android:gravity="end"
+                                android:text="QTY: 2"
+                                app:layout_constraintBottom_toTopOf="@id/sku"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/weight"
+                                app:layout_constraintTop_toBottomOf="@id/orderDesc" />
+
+                            <TextView
+                                android:id="@+id/sku"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16sdp"
+                                android:text="SKU: 21796885695"
+                                app:layout_constraintBottom_toBottomOf="@id/pkgImg"
+                                app:layout_constraintStart_toEndOf="@+id/pkgImg" />
+
+                            <LinearLayout
+                                android:id="@+id/scheduleLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16sdp"
+                                android:layout_marginTop="@dimen/_16sdp"
+                                android:layout_marginEnd="@dimen/_16sdp"
+                                android:orientation="horizontal"
+                                app:layout_constraintTop_toBottomOf="@id/pkgImg">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Pickup Schedule" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/manrope_extrabold"
+                                    android:gravity="end"
+                                    android:text="Tue, Jan 9m 2021"
+                                    android:textColor="@color/black"
+                                    app:autoSizeStepGranularity="2sp"
+                                    app:autoSizeTextType="uniform" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/dropOffSchedule"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16sdp"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:layout_marginEnd="@dimen/_16sdp"
+                                android:orientation="horizontal"
+                                app:layout_constraintTop_toBottomOf="@id/scheduleLayout">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Drop-off Schedule" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/manrope_extrabold"
+                                    android:gravity="end"
+                                    android:text="Tue, Jan 9m 2021"
+                                    android:textColor="@color/black"
+                                    app:autoSizeStepGranularity="2sp"
+                                    app:autoSizeTextType="uniform" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/receiverContactNumberLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16sdp"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:layout_marginEnd="@dimen/_16sdp"
+                                android:orientation="horizontal"
+                                app:layout_constraintTop_toBottomOf="@id/dropOffSchedule">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Receiver Contact Number" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/manrope_extrabold"
+                                    android:gravity="end"
+                                    android:text="+971 458799647"
+                                    android:textColor="@color/black"
+                                    app:autoSizeStepGranularity="2sp"
+                                    app:autoSizeTextType="uniform" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/eclipse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16sdp"
+                                android:src="@drawable/ic_eclipse_purple"
+                                app:layout_constraintBottom_toBottomOf="@id/pickupLocationDetails"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/pickupLocationDetails" />
+
+                            <TextView
+                                android:id="@+id/pickupLB"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:text="Pickup Point"
+                                app:layout_constraintStart_toEndOf="@id/eclipse"
+                                app:layout_constraintTop_toBottomOf="@id/receiverContactNumberLayout" />
+
+                            <TextView
+                                android:id="@+id/pickupLocationDetails"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_16sdp"
+                                android:fontFamily="@font/manrope_extrabold"
+                                android:text="Rustam Building, Gulshan-2, Floor #2, Flat: A-4"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_13ssp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@id/pickupLB"
+                                app:layout_constraintTop_toBottomOf="@id/pickupLB" />
+
+                            <TextView
+                                android:id="@+id/pickupLocation"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_16sdp"
+                                android:text="198/8, East rayerbajar, Dhanomindi, Dhaka-1217"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@id/pickupLB"
+                                app:layout_constraintTop_toBottomOf="@id/pickupLocationDetails" />
+
+                            <ImageView
+                                android:id="@+id/eclipse2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16sdp"
+                                android:src="@drawable/ic_eclipse_grey"
+                                app:layout_constraintBottom_toBottomOf="@id/pickupLocation"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/pickupLocation" />
+
+                            <ImageView
+                                android:id="@+id/eclipse3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:src="@drawable/ic_eclipse_stroke"
+                                app:layout_constraintEnd_toEndOf="@id/eclipse2"
+                                app:layout_constraintStart_toStartOf="@id/eclipse2"
+                                app:layout_constraintTop_toBottomOf="@+id/pickupLocation" />
+
+                            <ImageView
+                                android:id="@+id/eclipse4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16sdp"
+                                android:src="@drawable/ic_location"
+                                app:layout_constraintBottom_toBottomOf="@id/dropoffLocationDetails"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/dropoffLocationDetails" />
+
+                            <TextView
+                                android:id="@+id/dropoffLB"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:text="Pickup Point"
+                                app:layout_constraintStart_toEndOf="@id/eclipse4"
+                                app:layout_constraintTop_toBottomOf="@id/eclipse3" />
+
+                            <TextView
+                                android:id="@+id/dropoffLocationDetails"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_16sdp"
+                                android:fontFamily="@font/manrope_extrabold"
+                                android:text="Rustam Building, Gulshan-2, Floor #2, Flat: A-4"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_13ssp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@id/dropoffLB"
+                                app:layout_constraintTop_toBottomOf="@id/dropoffLB" />
+
+                            <TextView
+                                android:id="@+id/dropoffLocation"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_16sdp"
+                                android:text="198/8, East rayerbajar, Dhanomindi, Dhaka-1217"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@id/pickupLB"
+                                app:layout_constraintTop_toBottomOf="@id/dropoffLocationDetails" />
+
+                            <ImageView
+                                android:id="@+id/eclipse5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16sdp"
+                                android:src="@drawable/ic_eclipse_grey"
+                                app:layout_constraintBottom_toBottomOf="@id/dropoffLB"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/dropoffLB" />
+
+                            <View
+                                android:id="@+id/line"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_margin="@dimen/_16sdp"
+                                android:background="#DBDBDB"
+                                app:layout_constraintTop_toBottomOf="@id/dropoffLocation" />
+
+                            <LinearLayout
+                                android:id="@+id/totalCharge"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16sdp"
+                                android:layout_marginTop="@dimen/_16sdp"
+                                android:layout_marginEnd="@dimen/_16sdp"
+                                android:orientation="horizontal"
+                                app:layout_constraintTop_toBottomOf="@id/line">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Total Charge"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_14ssp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/manrope_extrabold"
+                                    android:gravity="end"
+                                    android:text="AED 1150"
+                                    android:textColor="@color/purple"
+                                    android:textSize="@dimen/_14ssp"
+                                    app:autoSizeStepGranularity="2sp"
+                                    app:autoSizeTextType="uniform" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/promoLB"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16sdp"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:text="Promo Code"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_14ssp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/totalCharge" />
+
+                            <LinearLayout
+                                android:id="@+id/promoLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16sdp"
+                                android:layout_marginTop="@dimen/_16sdp"
+                                android:layout_marginEnd="@dimen/_16sdp"
+                                android:orientation="horizontal"
+                                app:layout_constraintTop_toBottomOf="@id/promoLB">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/code"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    app:boxBackgroundColor="@color/white"
+                                    app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+                                    app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+                                    app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+                                    app:boxCornerRadiusTopStart="@dimen/_8sdp"
+                                    app:boxStrokeColor="#DBDBDB"
+                                    app:boxStrokeWidth="2dp"
+                                    app:hintEnabled="false"
+                                    app:boxStrokeWidthFocused="0dp"
+                                    app:layout_constraintTop_toBottomOf="@id/additionalsLB">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:hint="Code here "
+                                        android:padding="@dimen/_8sdp" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <Button
+                                    android:id="@+id/applyPromo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_16sdp"
+                                    android:insetTop="0dp"
+                                    android:insetBottom="0dp"
+                                    android:padding="@dimen/_16sdp"
+                                    android:stateListAnimator="@null"
+                                    android:text="APPLY"
+                                    android:textAllCaps="false"
+                                    app:cornerRadius="@dimen/_8sdp"
+                                    app:elevation="0dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/finalCharge"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16sdp"
+                                android:layout_marginTop="@dimen/_16sdp"
+                                android:layout_marginEnd="@dimen/_16sdp"
+                                android:orientation="horizontal"
+                                app:layout_constraintTop_toBottomOf="@id/promoLayout">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Total"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_14ssp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/manrope_extrabold"
+                                    android:gravity="end"
+                                    android:text="AED 850"
+                                    android:textColor="@color/purple"
+                                    android:textSize="@dimen/_14ssp"
+                                    app:autoSizeStepGranularity="2sp"
+                                    app:autoSizeTextType="uniform" />
+                            </LinearLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <Button
+                        android:id="@+id/payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:padding="@dimen/_16sdp"
+                        android:stateListAnimator="@null"
+                        android:text="Payment"
+                        android:textAllCaps="false"
+                        app:cornerRadius="@dimen/_8sdp"
+                        app:elevation="0dp"
+                        app:layout_constraintTop_toBottomOf="@+id/card"
+                        app:layout_goneMarginTop="@dimen/_16sdp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

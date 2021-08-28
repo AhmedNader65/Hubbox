@@ -182,6 +182,10 @@
             app:boxBackgroundColor="#F5F5F5"
             app:boxStrokeWidth="0dp"
             app:boxStrokeWidthFocused="0dp"
+            app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+            app:boxCornerRadiusTopStart="@dimen/_8sdp"
             app:layout_constraintTop_toBottomOf="@id/shop"
             app:startIconDrawable="@drawable/ic_building">
 
