@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1016468051814",
+    "project_id": "hubbox-d1f45",
+    "storage_bucket": "hubbox-d1f45.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1016468051814:android:5802648342e96e59ebdaa7",
+        "android_client_info": {
+          "package_name": "com.hubbox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1016468051814-7296h4067v4q0ti2n6c1u2efj6qtpluc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD23_ZVrnsMkH4cGENznm5NbI37FI9SEKs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1016468051814-7296h4067v4q0ti2n6c1u2efj6qtpluc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

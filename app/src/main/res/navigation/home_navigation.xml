@@ -55,5 +55,21 @@
         tools:layout="@layout/fragment_creditcards"
         android:name="com.hubbox.ui.home.paymentCards.PaymentCardsFragment"
         android:label="PaymentCardsFragment" />
+    <fragment
+        android:id="@+id/creditCardScannerFragment"
+        tools:layout="@layout/fragment_credit_scanner"
+        android:name="com.hubbox.ui.home.paymentCards.CreditCardScannerFragment"
+        android:label="CreditCardScannerFragment" >
+        <action
+            android:id="@+id/action_creditCardScannerFragment_to_addCardFragment"
+            app:destination="@id/addCardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCardFragment"
+        tools:layout="@layout/fragment_add_card"
+        android:name="com.hubbox.ui.home.paymentCards.AddCardFragment"
+        android:label="AddCardFragment" />
 
 </navigation>

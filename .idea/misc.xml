@@ -4,42 +4,6 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../../layout/custom_preview.xml" value="0.35128205128205126" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/drawable/bg_grey_bottom_corner_round.xml" value="0.2203125" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/drawable/bg_grey_corner_round.xml" value="0.2169230769230769" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/drawable/bg_grey_edittext.xml" value="0.2203125" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/drawable/bg_top_round_lavandar.xml" value="0.2169230769230769" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/drawable/bg_top_round_white.xml" value="0.2203125" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/drawable/bg_white_corner_round.xml" value="0.2203125" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/drawable/bg_white_with_stroke.xml" value="0.15925925925925927" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/drawable/gredient_credit.xml" value="0.15925925925925927" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/drawable/ic_baseline_arrow_forward_24.xml" value="0.2203125" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/drawable/nav_background_curved.xml" value="0.2203125" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/drawable/selector_checkbox.xml" value="0.2203125" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/bottom_sheet_filter.xml" value="0.18" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/bottom_sheet_pickup_address.xml" value="0.22" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_change_password.xml" value="0.18" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_creditcards.xml" value="0.25" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_dropoff_address.xml" value="0.25" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_edit_profile.xml" value="0.22" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_home.xml" value="0.22" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_login.xml" value="0.10371376811594203" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_my_orders.xml" value="0.24561403508771928" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_my_profile.xml" value="0.2889908256880734" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_new_shipment.xml" value="0.14" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_on_boarding.xml" value="0.18885869565217392" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_parent_home.xml" value="0.1" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_pickup_address.xml" value="0.17" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_pickup_contact.xml" value="0.25" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_shipment_confirmation.xml" value="0.2" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_shipment_info.xml" value="0.15481832543443919" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_side_menu.xml" value="0.18885869565217392" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_splash.xml" value="0.18802083333333333" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/item_creditcard.xml" value="0.1" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/item_day.xml" value="0.5" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/item_order_card.xml" value="0.19701086956521738" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/layout/item_service_type.xml" value="0.33" />
-        <entry key="..\:/android/Hubbox/app/src/main/res/menu/bottom_menu.xml" value="0.20416666666666666" />
         <entry key="app/src/main/res/drawable/bg_grey_bottom_corner_round.xml" value="0.16196581196581197" />
         <entry key="app/src/main/res/drawable/bg_grey_top_corner_round.xml" value="0.17072072072072073" />
         <entry key="app/src/main/res/drawable/bg_top_round_lavandar.xml" value="0.19739583333333333" />
@@ -59,14 +23,21 @@
         <entry key="app/src/main/res/drawable/shadow.xml" value="0.29259259259259257" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22282608695652173" />
         <entry key="app/src/main/res/layout/app_keyboard.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/fragment_add_card.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_credit_scanner.xml" value="0.13940193491644678" />
+        <entry key="app/src/main/res/layout/fragment_creditcards.xml" value="0.15675675675675677" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.291196388261851" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.375" />
         <entry key="app/src/main/res/layout/fragment_my_orders.xml" value="0.18125" />
         <entry key="app/src/main/res/layout/fragment_on_boarding.xml" value="0.22282608695652173" />
         <entry key="app/src/main/res/layout/fragment_otp.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_parent_home.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_pickup_address.xml" value="0.15675675675675677" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.18125" />
+        <entry key="app/src/main/res/layout/fragment_shipment_info.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_creditcard.xml" value="0.15675675675675677" />
         <entry key="app/src/main/res/layout/item_language_dropdown.xml" value="0.3229166666666667" />
+        <entry key="app/src/main/res/layout/item_order_card.xml" value="0.15675675675675677" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.3302083333333333" />
       </map>
     </option>

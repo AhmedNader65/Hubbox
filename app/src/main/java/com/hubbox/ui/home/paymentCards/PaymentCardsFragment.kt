@@ -9,6 +9,7 @@ import android.view.animation.LinearInterpolator
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.DefaultItemAnimator
 import com.hubbox.R
 import com.hubbox.adapters.OrderStackAdapter
@@ -32,7 +33,9 @@ class PaymentCardsFragment : Fragment(), CardStackListener {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_creditcards, container, false)
         val mRootView = binding.getRoot()
-
+        binding.addCard.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.creditCardScannerFragment)
+        }
         initialize()
         return mRootView
     }
