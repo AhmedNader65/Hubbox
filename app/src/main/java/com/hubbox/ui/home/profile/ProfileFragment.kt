@@ -31,6 +31,9 @@ class ProfileFragment : Fragment() {
         binding.myProfile.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.myProfileFragment)
         }
+        binding.paymentCards.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.paymentCardsFragment)
+        }
         return mRootView
     }
 }

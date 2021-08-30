@@ -45,5 +45,15 @@
         tools:layout="@layout/fragment_change_password"
         android:name="com.hubbox.ui.home.myProfile.ChangePasswordFragment"
         android:label="ChangePasswordFragment" />
+    <fragment
+        android:id="@+id/editProfileFragment"
+        tools:layout="@layout/fragment_edit_profile"
+        android:name="com.hubbox.ui.home.myProfile.EditProfileFragment"
+        android:label="EditProfileFragment" />
+    <fragment
+        android:id="@+id/paymentCardsFragment"
+        tools:layout="@layout/fragment_creditcards"
+        android:name="com.hubbox.ui.home.paymentCards.PaymentCardsFragment"
+        android:label="PaymentCardsFragment" />
 
 </navigation>

@@ -38,5 +38,9 @@ class MyProfileFragment : Fragment() {
             Navigation.findNavController(it).navigate(R.id.changePasswordFragment)
 
         }
+        binding.edit.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.editProfileFragment)
+
+        }
     }
 }

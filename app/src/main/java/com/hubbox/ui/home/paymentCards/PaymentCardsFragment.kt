@@ -1,4 +1,4 @@
-package com.hubbox.ui.home.home
+package com.hubbox.ui.home.paymentCards
 
 import android.os.Bundle
 import android.util.Log
@@ -9,20 +9,20 @@ import android.view.animation.LinearInterpolator
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.DefaultItemAnimator
 import com.hubbox.R
 import com.hubbox.adapters.OrderStackAdapter
-import com.hubbox.databinding.FragmentHomeBinding
+import com.hubbox.adapters.PaymentCardsStackAdapter
+import com.hubbox.databinding.FragmentCreditcardsBinding
 import com.hubbox.model.Spot
 import com.yuyakaido.android.cardstackview.*
 
 
-class HomeFragment : Fragment(), CardStackListener {
+class PaymentCardsFragment : Fragment(), CardStackListener {
     private lateinit var navController: NavController
-    lateinit var binding: FragmentHomeBinding
+    lateinit var binding: FragmentCreditcardsBinding
     private lateinit var manager:CardStackLayoutManager
-    private val adapter by lazy { OrderStackAdapter(createSpots()) }
+    private val adapter by lazy { PaymentCardsStackAdapter(createSpots()) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,19 +30,16 @@ class HomeFragment : Fragment(), CardStackListener {
     ): View? {
         // Inflate the layout for this fragment
 
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_creditcards, container, false)
         val mRootView = binding.getRoot()
 
-        binding.shipping.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.createShipmentFragment)
-        }
         initialize()
         return mRootView
     }
 
     private fun initialize() {
             manager = CardStackLayoutManager(context, this)
-            manager.setStackFrom(StackFrom.Bottom)
+            manager.setStackFrom(StackFrom.Top)
             manager.setVisibleCount(3)
             manager.setTranslationInterval(8.0f)
             manager.setScaleInterval(0.95f)

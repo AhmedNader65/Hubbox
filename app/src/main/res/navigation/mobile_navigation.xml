@@ -49,4 +49,8 @@
         tools:layout="@layout/fragment_parent_home"
         android:name="com.hubbox.ui.home.ParentHomeFragment"
         android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.hubbox.ui.SplashFragment"
+        android:label="SplashFragment" />
 </navigation>

@@ -3,16 +3,14 @@ package com.hubbox.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.hubbox.R
 import com.hubbox.model.Spot
 
-class CardStackAdapter(
+class OrderStackAdapter(
     private var spots: List<Spot> = emptyList()
-) : RecyclerView.Adapter<CardStackAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<OrderStackAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
