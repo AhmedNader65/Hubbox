@@ -46,13 +46,6 @@ class CreditCardScannerFragment : Fragment(), OnAnalyzerFinished {
         val view = layoutInflater.inflate(com.hubbox.R.layout.fragment_credit_scanner, null)
 // Request camera permissions
 
-        if (allPermissionsGranted()) {
-            startCamera()
-        } else {
-            ActivityCompat.requestPermissions(
-                requireActivity(), REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS
-            )
-        }
 
         // Set up the listener for take photo button
 //        camera_capture_button.setOnClickListener { takePhoto() }
@@ -63,8 +56,27 @@ class CreditCardScannerFragment : Fragment(), OnAnalyzerFinished {
         return view
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        addManually.setOnClickListener{
 
-    private fun takePhoto() {}
+            val navBuilder = NavOptions.Builder()
+            navBuilder.setEnterAnim(R.anim.slide_in_left)
+            view?.let {
+                Navigation.findNavController(it)
+                    .navigate(R.id.addCardFragment,null, navBuilder.build())
+            }
+        }
+
+        if (allPermissionsGranted()) {
+            startCamera()
+        } else {
+            ActivityCompat.requestPermissions(
+                requireActivity(), REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS
+            )
+        }
+
+    }
 
     private fun startCamera() {
 

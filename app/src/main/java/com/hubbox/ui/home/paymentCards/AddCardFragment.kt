@@ -22,12 +22,16 @@ class AddCardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        cardNum.editText!!.setText(requireArguments().getString("cardNum"))
-        cardHolder.editText!!.setText(requireArguments().getString("cardHolder"))
-        expiryDate.editText!!.setText(requireArguments().getString("exp"))
-        creditNum.setText(requireArguments().getString("cardNum"))
-        holder.setText(requireArguments().getString("cardHolder"))
-        exp.setText(requireArguments().getString("exp"))
+        cvcDate.setEndIconOnClickListener {
+        }
+        if (arguments?.getString("cardNum") != null) {
+            cardNum.editText!!.setText(requireArguments().getString("cardNum"))
+            cardHolder.editText!!.setText(requireArguments().getString("cardHolder"))
+            expiryDate.editText!!.setText(requireArguments().getString("exp"))
+            creditNum.setText(requireArguments().getString("cardNum"))
+            holder.setText(requireArguments().getString("cardHolder"))
+            exp.setText(requireArguments().getString("exp"))
+        }
     }
 
 }

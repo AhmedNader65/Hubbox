@@ -12,6 +12,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.DefaultItemAnimator
 import com.hubbox.R
+import com.hubbox.adapters.CardHistoryAdapter
 import com.hubbox.adapters.OrderStackAdapter
 import com.hubbox.adapters.PaymentCardsStackAdapter
 import com.hubbox.databinding.FragmentCreditcardsBinding
@@ -36,6 +37,7 @@ class PaymentCardsFragment : Fragment(), CardStackListener {
         binding.addCard.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.creditCardScannerFragment)
         }
+        binding.historyRV.adapter = CardHistoryAdapter(createSpots())
         initialize()
         return mRootView
     }

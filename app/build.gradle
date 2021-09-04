@@ -69,4 +69,6 @@ dependencies {
 // CameraX View class
     implementation "androidx.camera:camera-view:1.0.0-alpha28"
 
+    implementation "com.github.douglasjunior:android-simple-tooltip:1.0.0-rc.0"
+
 }

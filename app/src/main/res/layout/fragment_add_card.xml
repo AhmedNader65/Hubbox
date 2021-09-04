@@ -278,7 +278,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8sdp"
-                android:text="Expire Date *"
+                android:text="CVV/CVC"
                 android:fontFamily="@font/manrope_medium"
                 app:layout_constraintStart_toStartOf="@id/cvcDate"
                 app:layout_constraintTop_toBottomOf="@id/cardHolder" />
@@ -299,6 +299,9 @@
                 app:boxStrokeWidth="0dp"
                 app:boxStrokeWidthFocused="0dp"
                 app:hintEnabled="false"
+                app:endIconDrawable="@drawable/ic_question_mark_filled"
+                app:endIconMode="custom"
+                app:endIconTint="@color/purple"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/expiryDate"
                 app:layout_constraintTop_toBottomOf="@id/expiryDateLB">
@@ -306,7 +309,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="CVC"
+                    android:hint="CVV/CVC"
                     android:inputType="numberDecimal"
                     android:padding="@dimen/_8sdp" />
             </com.google.android.material.textfield.TextInputLayout>
