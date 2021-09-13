@@ -77,4 +77,18 @@
         android:name="com.hubbox.ui.home.refundPref.RefundPreferencesFragment"
         android:label="RefundPreferencesFragment" />
 
+    <fragment
+        android:id="@+id/notificationFragment"
+        tools:layout="@layout/fragment_notifications"
+        android:name="com.hubbox.ui.home.notifications.NotificationsFragment"
+        android:label="Notification Fragmeent" />
+    <fragment
+        android:id="@+id/trackOrderFragment"
+        android:name="com.hubbox.ui.home.myorders.TrackOrderFragment"
+        android:label="TrackOrderFragment" />
+    <fragment
+        android:id="@+id/orderStatusFragment"
+        android:name="com.hubbox.ui.home.myorders.OrderStatusFragment"
+        android:label="OrderStatusFragment" />
+
 </navigation>

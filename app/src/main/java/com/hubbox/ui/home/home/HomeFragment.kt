@@ -18,11 +18,11 @@ import com.hubbox.model.Spot
 import com.yuyakaido.android.cardstackview.*
 
 
-class HomeFragment : Fragment(), CardStackListener {
+class HomeFragment : Fragment(), CardStackListener, OrderStackAdapter.OnOrderInteract {
     private lateinit var navController: NavController
     lateinit var binding: FragmentHomeBinding
-    private lateinit var manager:CardStackLayoutManager
-    private val adapter by lazy { OrderStackAdapter(createSpots()) }
+    private lateinit var manager: CardStackLayoutManager
+    private val adapter by lazy { OrderStackAdapter(createSpots(), this) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,24 +36,27 @@ class HomeFragment : Fragment(), CardStackListener {
         binding.shipping.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.createShipmentFragment)
         }
+        binding.notifications.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.notificationFragment)
+        }
         initialize()
         return mRootView
     }
 
     private fun initialize() {
-            manager = CardStackLayoutManager(context, this)
-            manager.setStackFrom(StackFrom.Bottom)
-            manager.setVisibleCount(3)
-            manager.setTranslationInterval(8.0f)
-            manager.setScaleInterval(0.95f)
-            manager.setSwipeThreshold(0.3f)
-            manager.setMaxDegree(20.0f)
-            manager.setDirections(Direction.HORIZONTAL)
-            manager.setCanScrollHorizontal(true)
-            manager.setCanScrollVertical(false)
-            manager.setSwipeableMethod(SwipeableMethod.AutomaticAndManual)
-            manager.setOverlayInterpolator(LinearInterpolator())
-            binding.cardStackView.layoutManager = manager
+        manager = CardStackLayoutManager(context, this)
+        manager.setStackFrom(StackFrom.Bottom)
+        manager.setVisibleCount(3)
+        manager.setTranslationInterval(8.0f)
+        manager.setScaleInterval(0.95f)
+        manager.setSwipeThreshold(0.3f)
+        manager.setMaxDegree(20.0f)
+        manager.setDirections(Direction.HORIZONTAL)
+        manager.setCanScrollHorizontal(true)
+        manager.setCanScrollVertical(false)
+        manager.setSwipeableMethod(SwipeableMethod.AutomaticAndManual)
+        manager.setOverlayInterpolator(LinearInterpolator())
+        binding.cardStackView.layoutManager = manager
         binding.cardStackView.adapter = adapter
         binding.cardStackView.itemAnimator.apply {
             if (this is DefaultItemAnimator) {
@@ -163,5 +166,10 @@ class HomeFragment : Fragment(), CardStackListener {
             )
         )
         return spots
+    }
+
+    override fun onOrderClicked() {
+        Navigation.findNavController(binding.cardStackView).navigate(R.id.orderStatusFragment)
+
     }
 }

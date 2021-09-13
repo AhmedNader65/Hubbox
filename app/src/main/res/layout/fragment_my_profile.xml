@@ -116,7 +116,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:src="@drawable/ic_profile_2"
-                            app:tint="#D43169" />
+                            app:tint="@color/fushia" />
                     </androidx.cardview.widget.CardView>
 
                     <LinearLayout

@@ -3,13 +3,12 @@ package com.hubbox.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.hubbox.R
 import com.hubbox.model.Spot
 
 class OrderStackAdapter(
-    private var spots: List<Spot> = emptyList()
+    private var spots: List<Spot> = emptyList(), val mListener: OnOrderInteract
 ) : RecyclerView.Adapter<OrderStackAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -23,7 +22,7 @@ class OrderStackAdapter(
 //        holder.city.text = spot.city
 
         holder.itemView.setOnClickListener { v ->
-            Toast.makeText(v.context, spot.name, Toast.LENGTH_SHORT).show()
+            mListener.onOrderClicked()
         }
     }
 
@@ -45,4 +44,8 @@ class OrderStackAdapter(
 //        var image: ImageView = view.findViewById(R.id.item_image)
     }
 
+
+    interface OnOrderInteract {
+        fun onOrderClicked()
+    }
 }

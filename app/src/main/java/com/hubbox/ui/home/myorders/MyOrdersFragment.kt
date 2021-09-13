@@ -8,16 +8,18 @@ import androidx.core.content.ContextCompat.getColor
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.button.MaterialButton
 import com.hubbox.R
+import com.hubbox.adapters.OrderStackAdapter
 import com.hubbox.adapters.OrdersAdapter
 import com.hubbox.databinding.BottomSheetFilterBinding
 import com.hubbox.databinding.FragmentMyOrdersBinding
 import com.hubbox.model.Spot
 
 
-class MyOrdersFragment : Fragment() {
+class MyOrdersFragment : Fragment(), OrderStackAdapter.OnOrderInteract {
     private lateinit var navController: NavController
     lateinit var binding: FragmentMyOrdersBinding
     override fun onCreateView(
@@ -28,22 +30,42 @@ class MyOrdersFragment : Fragment() {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_my_orders, container, false)
         val mRootView = binding.getRoot()
-        binding.ordersList.adapter = OrdersAdapter(createSpots())
+        binding.ordersList.adapter = OrdersAdapter(createSpots(), this)
         binding.history.setOnClickListener {
-            binding.history.setBackgroundColor(getColor(requireContext(),R.color.purple))
+            binding.history.setBackgroundColor(getColor(requireContext(), R.color.purple))
             (binding.history as MaterialButton).setIconTintResource(R.color.white)
-            (binding.history as MaterialButton).setTextColor(getColor(requireContext(),R.color.white))
+            (binding.history as MaterialButton).setTextColor(
+                getColor(
+                    requireContext(),
+                    R.color.white
+                )
+            )
             binding.active.setBackgroundColor(0xF7F8FB)
             (binding.active as MaterialButton).setIconTintResource(R.color.black)
-            (binding.active as MaterialButton).setTextColor(getColor(requireContext(),R.color.black))
+            (binding.active as MaterialButton).setTextColor(
+                getColor(
+                    requireContext(),
+                    R.color.black
+                )
+            )
         }
         binding.active.setOnClickListener {
-            binding.active.setBackgroundColor(getColor(requireContext(),R.color.purple))
+            binding.active.setBackgroundColor(getColor(requireContext(), R.color.purple))
             (binding.active as MaterialButton).setIconTintResource(R.color.white)
-            (binding.active as MaterialButton).setTextColor(getColor(requireContext(),R.color.white))
+            (binding.active as MaterialButton).setTextColor(
+                getColor(
+                    requireContext(),
+                    R.color.white
+                )
+            )
             binding.history.setBackgroundColor(0xF7F8FB)
             (binding.history as MaterialButton).setIconTintResource(R.color.black)
-            (binding.history as MaterialButton).setTextColor(getColor(requireContext(),R.color.black))
+            (binding.history as MaterialButton).setTextColor(
+                getColor(
+                    requireContext(),
+                    R.color.black
+                )
+            )
         }
 
         binding.filter.setOnClickListener {
@@ -51,7 +73,7 @@ class MyOrdersFragment : Fragment() {
             val dialog = BottomSheetDialog(requireContext())
 
 
-           val bsBinding =  BottomSheetFilterBinding.inflate(
+            val bsBinding = BottomSheetFilterBinding.inflate(
                 LayoutInflater.from(requireContext()),
                 null,
                 false
@@ -152,5 +174,10 @@ class MyOrdersFragment : Fragment() {
             )
         )
         return spots
+    }
+
+    override fun onOrderClicked() {
+        Navigation.findNavController(binding.active).navigate(R.id.orderStatusFragment)
+
     }
 }
