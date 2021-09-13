@@ -29,14 +29,15 @@ class OnBoardingFragment : Fragment() {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_on_boarding, container, false)
         val mRootView = binding.getRoot()
-        binding.onBoardingImg.setFactory {
-            val imgView = ImageView(requireContext())
-            imgView.scaleType = ImageView.ScaleType.FIT_CENTER
-            imgView.setPadding(8, 8, 8, 8)
-            imgView
-        }
+//        binding.onBoardingImg.setFactory {
+//            val imgView = ImageView(requireContext())
+//            imgView.scaleType = ImageView.ScaleType.FIT_CENTER
+//            imgView.setPadding(8, 8, 8, 8)
+//            imgView
+//        }
 
-        binding.onBoardingImg.setImageResource(R.drawable.img_onboarding1)
+        binding.animationView.setAnimation(R.raw.on1)
+//        binding.onBoardingImg.setImageResource(R.drawable.img_onboarding1)
         mRootView.setOnTouchListener(object : OnSwipeTouchListener(requireActivity()) {
             override fun onSwipeTop() {
             }
@@ -60,24 +61,30 @@ class OnBoardingFragment : Fragment() {
 
     private fun showNext() {
 
-        val inn: Animation =
-            AnimationUtils.loadAnimation(requireContext(), android.R.anim.slide_in_left)
-        val out: Animation =
-            AnimationUtils.loadAnimation(requireContext(), android.R.anim.slide_out_right)
-        binding.onBoardingImg.inAnimation = inn
-        binding.onBoardingImg.outAnimation = out
+//        val inn: Animation =
+//            AnimationUtils.loadAnimation(requireContext(), android.R.anim.slide_in_left)
+//        val out: Animation =
+//            AnimationUtils.loadAnimation(requireContext(), android.R.anim.slide_out_right)
+//        binding.onBoardingImg.inAnimation = inn
+//        binding.onBoardingImg.outAnimation = out
 
         when (index) {
             0 -> {
                 index++
-                binding.onBoardingImg.setImageResource(R.drawable.img_onboarding2)
+                binding.animationView.setAnimation(R.raw.on2)
+                binding.animationView.progress = 0f
+                binding.animationView.playAnimation()
+//                binding.onBoardingImg.setImageResource(R.drawable.img_onboarding2)
                 binding.nextBtn.setImageResource(R.drawable.boarding_btn_2)
                 binding.indicator.setImageResource(R.drawable.onboarding_indicator_2)
                 binding.onBoardingTitle.text = resources.getString(R.string.on_boarding2)
             }
             1 -> {
                 index++
-                binding.onBoardingImg.setImageResource(R.drawable.img_onboarding3)
+                binding.animationView.setAnimation(R.raw.on3)
+                binding.animationView.progress = 0f
+                binding.animationView.playAnimation()
+//                binding.onBoardingImg.setImageResource(R.drawable.img_onboarding3)
                 binding.nextBtn.setImageResource(R.drawable.boarding_btn_3)
                 binding.onBoardingTitle.text = resources.getString(R.string.on_boarding3)
                 binding.indicator.setImageResource(R.drawable.onboarding_indicator_3)
@@ -85,7 +92,7 @@ class OnBoardingFragment : Fragment() {
             }
             2 -> {
                 index=0
-                Navigation.findNavController(binding.onBoardingImg)
+                Navigation.findNavController(binding.nextBtn)
                     .navigate(R.id.action_onBoardingFragment_to_loginFragment)
 
             }
@@ -94,24 +101,30 @@ class OnBoardingFragment : Fragment() {
 
     private fun showPrevious() {
 
-        val inn: Animation =
-            AnimationUtils.loadAnimation(requireContext(), R.anim.slide_out_left)
-        val out: Animation =
-            AnimationUtils.loadAnimation(requireContext(), R.anim.slide_in_right)
-        binding.onBoardingImg.inAnimation = out
-        binding.onBoardingImg.outAnimation = inn
+//        val inn: Animation =
+//            AnimationUtils.loadAnimation(requireContext(), R.anim.slide_out_left)
+//        val out: Animation =
+//            AnimationUtils.loadAnimation(requireContext(), R.anim.slide_in_right)
+//        binding.onBoardingImg.inAnimation = out
+//        binding.onBoardingImg.outAnimation = inn
 
         when (index) {
             1 -> {
                 index--
-                binding.onBoardingImg.setImageResource(R.drawable.img_onboarding1)
+                binding.animationView.setAnimation(R.raw.on1)
+                binding.animationView.progress = 0f
+                binding.animationView.playAnimation()
+//                binding.onBoardingImg.setImageResource(R.drawable.img_onboarding1)
                 binding.nextBtn.setImageResource(R.drawable.boarding_btn_1)
                 binding.indicator.setImageResource(R.drawable.onboarding_indicator_1)
                 binding.onBoardingTitle.text = resources.getString(R.string.on_boarding1)
             }
             2 -> {
                 index--
-                binding.onBoardingImg.setImageResource(R.drawable.img_onboarding2)
+                binding.animationView.setAnimation(R.raw.on2)
+                binding.animationView.progress = 0f
+                binding.animationView.playAnimation()
+//                binding.onBoardingImg.setImageResource(R.drawable.img_onboarding2)
                 binding.nextBtn.setImageResource(R.drawable.boarding_btn_2)
                 binding.onBoardingTitle.text = resources.getString(R.string.on_boarding2)
                 binding.indicator.setImageResource(R.drawable.onboarding_indicator_2)

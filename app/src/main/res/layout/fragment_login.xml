@@ -8,17 +8,26 @@
         android:background="@drawable/gredient"
         tools:context=".ui.auth.LoginFragment">
 
-        <ImageView
-            android:id="@+id/onBoardingImg"
+<!--        <ImageView-->
+<!--            android:id="@+id/onBoardingImg"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:scaleType="fitXY"-->
+<!--            android:src="@drawable/img_login"-->
+<!--            android:layout_marginTop="@dimen/_16sdp"-->
+<!--            android:layout_marginBottom="@dimen/_16sdp"-->
+<!--            app:layout_constraintBottom_toTopOf="@id/loginTitle"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/img_login"
-            android:layout_marginTop="@dimen/_16sdp"
-            android:layout_marginBottom="@dimen/_16sdp"
             app:layout_constraintBottom_toTopOf="@id/loginTitle"
-            app:layout_constraintTop_toTopOf="parent" />
-
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_rawRes="@raw/on4"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
 
         <TextView
             android:id="@+id/loginTitle"

@@ -1,5 +1,8 @@
 package com.hubbox.ui.home.profile
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +13,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
+import com.hubbox.BuildConfig
 import com.hubbox.R
 import com.hubbox.databinding.FragmentHomeBinding
 import com.hubbox.databinding.FragmentParentHomeBinding
@@ -33,6 +37,36 @@ class ProfileFragment : Fragment() {
         }
         binding.paymentCards.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.paymentCardsFragment)
+        }
+        binding.preferences.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.refundPreferencesFragment)
+        }
+        binding.shareApp.setOnClickListener {
+            val intent = Intent()
+            intent.setAction(Intent.ACTION_SEND)
+            intent.putExtra(Intent.EXTRA_TEXT,getString(R.string.sharingText)
+                    +" https://play.google.com/store/apps/details?id=${BuildConfig.APPLICATION_ID}")
+            intent.setType("text/plain")
+            startActivity(intent)
+        }
+        binding.shareApp.setOnClickListener {
+            val intent = Intent()
+            intent.setAction(Intent.ACTION_SEND)
+            intent.putExtra(Intent.EXTRA_TEXT,getString(R.string.sharingText)
+                    +" https://play.google.com/store/apps/details?id=${BuildConfig.APPLICATION_ID}")
+            intent.setType("text/plain")
+            startActivity(intent)
+        }
+        binding.rateApp.setOnClickListener {
+            val uri = Uri.parse("market://details?id=${BuildConfig.APPLICATION_ID}")
+            val intent = Intent(Intent.ACTION_VIEW,uri)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY or Intent.FLAG_ACTIVITY_NEW_DOCUMENT
+            or Intent.FLAG_ACTIVITY_NEW_TASK)
+            try {
+                startActivity(intent)
+            }catch (e: ActivityNotFoundException){
+                startActivity(Intent(Intent.ACTION_VIEW,Uri.parse("https://play.google.com/store/apps/details?id=${BuildConfig.APPLICATION_ID}")))
+            }
         }
         return mRootView
     }

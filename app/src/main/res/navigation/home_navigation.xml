@@ -71,5 +71,10 @@
         tools:layout="@layout/fragment_add_card"
         android:name="com.hubbox.ui.home.paymentCards.AddCardFragment"
         android:label="AddCardFragment" />
+    <fragment
+        android:id="@+id/refundPreferencesFragment"
+        tools:layout="@layout/fragment_preferences"
+        android:name="com.hubbox.ui.home.refundPref.RefundPreferencesFragment"
+        android:label="RefundPreferencesFragment" />
 
 </navigation>

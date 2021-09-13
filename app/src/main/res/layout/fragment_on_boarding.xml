@@ -8,13 +8,22 @@
         android:layout_height="match_parent"
         tools:context=".ui.onboarding.OnBoardingFragment">
 
-        <ImageSwitcher
-            android:id="@+id/onBoardingImg"
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:scaleType="fitXY"
             app:layout_constraintBottom_toTopOf="@id/indicator"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_rawRes="@raw/on1"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
+<!--        <ImageSwitcher-->
+<!--            android:id="@+id/onBoardingImg"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:scaleType="fitXY"-->
+<!--            app:layout_constraintBottom_toTopOf="@id/indicator"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
         <ImageView
             android:id="@+id/indicator"

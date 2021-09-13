@@ -12,7 +12,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:lottie_rawRes="@raw/splash"
+            app:lottie_rawRes="@raw/on1"
             app:lottie_autoPlay="true"
             app:lottie_loop="true" />
     </androidx.constraintlayout.widget.ConstraintLayout>

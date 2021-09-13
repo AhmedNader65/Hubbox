@@ -27,4 +27,5 @@
     <string name="recovery">Recovery</string>
     <string name="moving_desc">Moving and Shifting your Stuff</string>
     <string name="activeOrders">You have 50 active order(s)</string>
+    <string name="sharingText">"Hey check out this amazing shipment app, You can earn free shipping here "</string>
 </resources>

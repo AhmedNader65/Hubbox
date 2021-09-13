@@ -4,10 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../../layout/custom_preview.xml" value="0.35128205128205126" />
+        <entry key="..\:/android/Hubbox/app/src/main/res/layout/bottom_sheet_filter.xml" value="0.1" />
         <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_add_card.xml" value="0.33" />
         <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_credit_scanner.xml" value="0.12916666666666668" />
         <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_creditcards.xml" value="0.33" />
         <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_login.xml" value="0.1" />
+        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_on_boarding.xml" value="0.1" />
+        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_preferences.xml" value="0.14" />
+        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="..\:/android/Hubbox/app/src/main/res/layout/fragment_splash.xml" value="0.1" />
         <entry key="..\:/android/Hubbox/app/src/main/res/layout/item_card_history.xml" value="0.5" />
         <entry key="..\:/android/Hubbox/app/src/main/res/layout/item_creditcard.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/bg_grey_bottom_corner_round.xml" value="0.16196581196581197" />
