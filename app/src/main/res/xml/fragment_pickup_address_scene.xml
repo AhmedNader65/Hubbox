@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/more"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_60sdp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@+id/office"
+            motion:layout_constraintTop_toBottomOf="@id/savLocation" />
+
+        <Constraint
+            android:id="@+id/home"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_60sdp"
+            motion:layout_constraintEnd_toStartOf="@+id/office"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/savLocation" />
+
+        <Constraint
+            android:id="@+id/office"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_60sdp"
+            motion:layout_constraintEnd_toStartOf="@+id/more"
+            motion:layout_constraintStart_toEndOf="@+id/home"
+            motion:layout_constraintTop_toBottomOf="@id/savLocation" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/OfficeEnd">
+        <Constraint
+            android:id="@+id/office"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_60sdp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/savLocation" />
+        <Constraint
+            android:id="@+id/more"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_60sdp"
+            motion:layout_constraintEnd_toEndOf="@+id/office"
+            motion:layout_constraintStart_toStartOf="@+id/office"
+            motion:layout_constraintTop_toBottomOf="@id/savLocation" />
+        <Constraint
+            android:id="@+id/home"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_60sdp"
+            motion:layout_constraintEnd_toEndOf="@+id/office"
+            motion:layout_constraintStart_toStartOf="@+id/office"
+            motion:layout_constraintTop_toBottomOf="@id/savLocation" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/otherEnd">
+        <Constraint
+            android:id="@+id/office"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_60sdp"
+            motion:layout_constraintEnd_toEndOf="@+id/more"
+            motion:layout_constraintStart_toStartOf="@+id/more"
+            motion:layout_constraintTop_toBottomOf="@id/savLocation" />
+        <Constraint
+            android:id="@+id/more"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_60sdp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/savLocation" />
+        <Constraint
+            android:id="@+id/home"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_60sdp"
+            motion:layout_constraintEnd_toEndOf="@+id/more"
+            motion:layout_constraintStart_toStartOf="@+id/more"
+            motion:layout_constraintTop_toBottomOf="@id/savLocation" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/homeEnd">
+        <Constraint
+            android:id="@+id/office"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_60sdp"
+            motion:layout_constraintEnd_toEndOf="@+id/home"
+            motion:layout_constraintStart_toStartOf="@+id/home"
+            motion:layout_constraintTop_toBottomOf="@id/savLocation" />
+        <Constraint
+            android:id="@+id/more"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_60sdp"
+            motion:layout_constraintEnd_toEndOf="@+id/home"
+            motion:layout_constraintStart_toStartOf="@+id/home"
+            motion:layout_constraintTop_toBottomOf="@id/savLocation" />
+        <Constraint
+            android:id="@+id/home"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_60sdp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/savLocation" />
+    </ConstraintSet>
+
+    <Transition
+        motion:constraintSetEnd="@id/homeEnd"
+        motion:constraintSetStart="@+id/start"
+        motion:duration="1000"/>
+</MotionScene>

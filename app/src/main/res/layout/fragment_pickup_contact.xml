@@ -136,6 +136,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_building_details"/>
             <TextView
+                android:id="@+id/addressDetails"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
