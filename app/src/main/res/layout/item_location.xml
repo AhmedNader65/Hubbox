@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_round_lavandar_light"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_marginTop="@dimen/_8sdp"
+                android:id="@+id/type"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                app:cardCornerRadius="@dimen/_20sdp"
+                android:padding="@dimen/_8sdp"
+                app:cardBackgroundColor="@color/lavandar_200"
+                app:cardElevation="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_loca_example" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/title"
+                android:textSize="@dimen/_13sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:fontFamily="@font/manrope_extrabold"
+                android:text="Jon’s Home"
+                android:textColor="@color/purple"
+                app:layout_constraintStart_toEndOf="@id/type"
+                app:layout_constraintTop_toTopOf="@id/type" />
+
+
+            <TextView
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_4sdp"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/title"
+                android:text="Default"
+                app:layout_constraintTop_toTopOf="@+id/title"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:textSize="@dimen/_9sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/title"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_round_fushia"
+                app:cornerRadius="@dimen/_20sdp"/>
+
+            <TextView
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:id="@+id/date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/manrope_medium"
+                app:layout_constraintEnd_toStartOf="@+id/edit"
+                android:textColor="@color/delivery_black"
+                android:text="RKM Building (AboHail )
+Aletihad road , RKM building ,1701 "
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintStart_toStartOf="@id/title"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+            <ImageView
+                android:id="@+id/delet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_trash_filled"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/title" />
+
+            <TextView
+                android:id="@+id/edit"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_4sdp"
+                android:paddingTop="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                app:layout_constraintEnd_toStartOf="@+id/delet"
+                android:text="Edit"
+                app:layout_constraintTop_toTopOf="@+id/title"
+                android:textSize="@dimen/_9sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/title"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_round_purple"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

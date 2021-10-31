@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_16sdp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_16sdp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gredient_credit">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/circles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_cc_circles"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/ic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_32sdp"
+                        android:src="@drawable/ic_cc_ic"
+                        app:layout_constraintStart_toEndOf="@+id/manufacturer"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:src="@drawable/ic_trash"
+                        app:layout_constraintBottom_toBottomOf="@+id/circles"
+                        app:layout_constraintEnd_toEndOf="@+id/circles"
+                        app:layout_constraintStart_toStartOf="@+id/circles"
+                        app:layout_constraintTop_toTopOf="@+id/circles" />
+
+                    <ImageView
+
+                        android:id="@+id/manufacturer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_32sdp"
+                        android:src="@drawable/ic_visa"
+                        app:layout_constraintBottom_toBottomOf="@+id/ic"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/ic"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/creditNum"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_32sdp"
+                        android:fontFamily="@font/manrope_regular"
+                        android:lines="1"
+                        android:text="5131   7842   5454   1771"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_18ssp"
+                        app:autoSizeStepGranularity="2sp"
+                        app:autoSizeTextType="uniform"
+                        app:layout_constraintEnd_toStartOf="@id/circles"
+                        app:layout_constraintStart_toStartOf="@id/manufacturer"
+                        app:layout_constraintTop_toBottomOf="@id/manufacturer" />
+
+                    <TextView
+                        android:id="@+id/cardHolderLB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:text="CARD HOLDER"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toStartOf="@id/creditNum"
+                        app:layout_constraintTop_toBottomOf="@id/creditNum" />
+
+                    <TextView
+                        android:id="@+id/holder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_32sdp"
+                        android:fontFamily="@font/manrope_extrabold"
+                        android:text="Ibrahim Hamad"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/cardHolderLB"
+                        app:layout_constraintTop_toBottomOf="@+id/cardHolderLB" />
+
+                    <TextView
+                        android:id="@+id/expLB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:layout_marginEnd="@dimen/_56sdp"
+                        android:fontFamily="@font/manrope_bold"
+                        android:text="EXP"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/creditNum" />
+
+                    <TextView
+                        android:id="@+id/exp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:text="11/25"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintStart_toStartOf="@+id/expLB"
+                        app:layout_constraintTop_toBottomOf="@+id/expLB" />
+
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchdefault"
+                        style="@style/TextAppearance.AppCompat.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Default"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toStartOf="@+id/holder"
+                        app:layout_constraintTop_toBottomOf="@+id/holder"
+                        app:thumbTint="@color/purple"
+                        app:trackTint="#DBDBDB" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_wallet_lock"
+                        app:layout_constraintBottom_toBottomOf="@+id/switchdefault"
+                        app:layout_constraintEnd_toEndOf="@+id/delete"
+                        app:layout_constraintTop_toTopOf="@+id/switchdefault"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+</layout>

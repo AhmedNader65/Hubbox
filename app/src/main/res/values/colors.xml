@@ -2,8 +2,12 @@
 <resources>
     <color name="purple">#52437B</color>
     <color name="teal_200">#FF03DAC5</color>
+    <color name="selected_blue">#04AFA5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#111A2C</color>
+    <color name="grey_70">#707070</color>
+    <color name="light_orange">#FF7C6A</color>
+    <color name="delivery_black">#383640</color>
     <color name="selected_green">#CAEFFF</color>
     <color name="unselected_card">#F7F8FB</color>
     <color name="lavandar_200">#F5F2FF</color>
@@ -14,5 +18,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorLightGrey">#BDBDBD</color>
     <color name="fushia">#D43169</color>
+    <color name="red">#FF001F</color>
     <color name="fusheia">#BBC0F1</color>
 </resources>

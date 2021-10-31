@@ -35,28 +35,28 @@ class ProfileFragment : Fragment() {
         binding.myProfile.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.myProfileFragment)
         }
-        binding.paymentCards.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.paymentCardsFragment)
-        }
+//        binding.paymentCards.setOnClickListener {
+//            Navigation.findNavController(it).navigate(R.id.paymentCardsFragment)
+//        }
         binding.preferences.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.refundPreferencesFragment)
         }
-        binding.shareApp.setOnClickListener {
-            val intent = Intent()
-            intent.setAction(Intent.ACTION_SEND)
-            intent.putExtra(Intent.EXTRA_TEXT,getString(R.string.sharingText)
-                    +" https://play.google.com/store/apps/details?id=${BuildConfig.APPLICATION_ID}")
-            intent.setType("text/plain")
-            startActivity(intent)
-        }
-        binding.shareApp.setOnClickListener {
-            val intent = Intent()
-            intent.setAction(Intent.ACTION_SEND)
-            intent.putExtra(Intent.EXTRA_TEXT,getString(R.string.sharingText)
-                    +" https://play.google.com/store/apps/details?id=${BuildConfig.APPLICATION_ID}")
-            intent.setType("text/plain")
-            startActivity(intent)
-        }
+//        binding.shareApp.setOnClickListener {
+//            val intent = Intent()
+//            intent.setAction(Intent.ACTION_SEND)
+//            intent.putExtra(Intent.EXTRA_TEXT,getString(R.string.sharingText)
+//                    +" https://play.google.com/store/apps/details?id=${BuildConfig.APPLICATION_ID}")
+//            intent.setType("text/plain")
+//            startActivity(intent)
+//        }
+//        binding.shareApp.setOnClickListener {
+//            val intent = Intent()
+//            intent.setAction(Intent.ACTION_SEND)
+//            intent.putExtra(Intent.EXTRA_TEXT,getString(R.string.sharingText)
+//                    +" https://play.google.com/store/apps/details?id=${BuildConfig.APPLICATION_ID}")
+//            intent.setType("text/plain")
+//            startActivity(intent)
+//        }
         binding.rateApp.setOnClickListener {
             val uri = Uri.parse("market://details?id=${BuildConfig.APPLICATION_ID}")
             val intent = Intent(Intent.ACTION_VIEW,uri)

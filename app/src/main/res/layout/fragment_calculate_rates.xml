@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F7F8FB">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_16sdp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/CalculateRates"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@id/back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/back" />
+
+
+        <ScrollView
+            android:layout_marginTop="@dimen/_24sdp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_top_round_white"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingTop="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_12sdp">
+
+
+            <ImageView
+                android:id="@+id/purpledot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_purple_dot"
+                app:layout_constraintBottom_toBottomOf="@+id/shippingtxt"
+                app:layout_constraintEnd_toEndOf="@+id/pinkdot"
+                app:layout_constraintStart_toStartOf="@+id/pinkdot"
+                app:layout_constraintTop_toTopOf="@+id/shippingtxt" />
+
+            <TextView
+                android:id="@+id/shippingtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:text="@string/shoppingfrom"
+                android:textColor="@color/purple"
+                app:layout_constraintStart_toEndOf="@+id/purpledot"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/countrycityfrom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/bg_round_grey_stroke"
+                android:padding="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/shippingtxt"
+                app:layout_constraintTop_toBottomOf="@+id/shippingtxt">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/countryfrom"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+                    app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+                    app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+                    app:boxCornerRadiusTopStart="@dimen/_8sdp"
+
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintEnabled="false"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_extrabold"
+                        android:hint="Select country, pickup point"
+                        android:inputType="textAutoComplete"
+                        android:padding="@dimen/_8sdp"
+                        android:textColor="@color/purple"
+                        android:textSize="@dimen/_11sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <View
+                    android:id="@+id/middle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@color/colorLightGrey"
+                    app:layout_constraintTop_toBottomOf="@+id/countryfrom" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/city"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/_4sdp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+                    app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+                    app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+                    app:boxCornerRadiusTopStart="@dimen/_8sdp"
+
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintEnabled="false"
+                    app:layout_constraintTop_toBottomOf="@+id/middle1">
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_extrabold"
+                        android:hint="Select City, Pickup Point"
+                        android:inputType="textAutoComplete"
+                        android:padding="@dimen/_8sdp"
+                        android:textColor="@color/purple"
+                        android:textSize="@dimen/_11sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/pinkdot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_hollow_foshia_dot"
+                app:layout_constraintBottom_toBottomOf="@+id/shippingto"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/shippingto" />
+
+            <TextView
+                android:id="@+id/shippingto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/shippingto"
+                android:textColor="@color/purple"
+                app:layout_constraintStart_toEndOf="@+id/pinkdot"
+                app:layout_constraintTop_toBottomOf="@+id/countrycityfrom" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/pinkdot"
+                app:layout_constraintEnd_toEndOf="@+id/pinkdot"
+                app:layout_constraintStart_toStartOf="@+id/pinkdot"
+                app:layout_constraintTop_toBottomOf="@+id/purpledot">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_grey_dot" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_grey_dot" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_grey_dot" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_grey_dot" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/countrycityto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/bg_round_grey_stroke"
+                android:padding="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/shippingto"
+                app:layout_constraintTop_toBottomOf="@+id/shippingto">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/countryto"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+                    app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+                    app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+                    app:boxCornerRadiusTopStart="@dimen/_8sdp"
+
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintEnabled="false"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_extrabold"
+                        android:hint="Select country, pickup point"
+                        android:inputType="textAutoComplete"
+                        android:padding="@dimen/_8sdp"
+                        android:textColor="@color/purple"
+                        android:textSize="@dimen/_11sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <View
+                    android:id="@+id/middle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@color/colorLightGrey"
+                    app:layout_constraintTop_toBottomOf="@+id/countryto" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/cityto"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/_4sdp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+                    app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+                    app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+                    app:boxCornerRadiusTopStart="@dimen/_8sdp"
+
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintEnabled="false"
+                    app:layout_constraintTop_toBottomOf="@+id/middle2">
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_extrabold"
+                        android:hint="Select City, Pickup Point"
+                        android:inputType="textAutoComplete"
+                        android:padding="@dimen/_8sdp"
+                        android:textColor="@color/purple"
+                        android:textSize="@dimen/_11sdp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/locaic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_location"
+                app:layout_constraintBottom_toBottomOf="@+id/countrycityto"
+                app:layout_constraintEnd_toEndOf="@+id/pinkdot"
+                app:layout_constraintStart_toStartOf="@+id/pinkdot" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/locaic"
+                app:layout_constraintEnd_toEndOf="@+id/pinkdot"
+                app:layout_constraintStart_toStartOf="@+id/pinkdot"
+                app:layout_constraintTop_toBottomOf="@+id/pinkdot">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_grey_dot" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_grey_dot" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_grey_dot" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/selecttype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/SelectShipmentType"
+                android:textColor="@color/purple"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/countrycityto" />
+
+
+            <LinearLayout
+                android:id="@+id/conshipment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintTop_toBottomOf="@id/selecttype">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/document"
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        app:cardBackgroundColor="#E7FCFF"
+                        app:cardCornerRadius="@dimen/_8sdp"
+                        app:cardElevation="0dp"
+                        app:contentPadding="@dimen/_8sdp">
+
+                        <LinearLayout
+                            android:id="@+id/homeContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_doc" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Doc"
+                                android:textColor="@color/purple" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/office"
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        app:cardBackgroundColor="#F5F2FF"
+                        app:cardCornerRadius="@dimen/_8sdp"
+                        app:cardElevation="0dp"
+                        app:contentPadding="@dimen/_8sdp"
+                        app:layout_constraintEnd_toStartOf="@+id/more"
+                        app:layout_constraintStart_toEndOf="@+id/document"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/workContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_parcel" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Parcel"
+                                android:textColor="@color/purple" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/more"
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        app:cardBackgroundColor="#FEEDF3"
+                        app:cardCornerRadius="@dimen/_8sdp"
+                        app:cardElevation="0dp"
+                        app:contentPadding="@dimen/_8sdp">
+
+                        <LinearLayout
+                            android:id="@+id/moreContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_truck_recovery" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Recovery"
+                                android:textColor="@color/purple" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/Moving"
+                        android:layout_width="@dimen/_65sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        app:cardBackgroundColor="#FFF1EB"
+                        app:cardCornerRadius="@dimen/_8sdp"
+                        app:cardElevation="0dp"
+                        app:contentPadding="@dimen/_8sdp"
+                        app:layout_constraintEnd_toStartOf="@+id/more"
+                        app:layout_constraintStart_toEndOf="@+id/document"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/MovingContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_moving_truck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Moving"
+                                android:textColor="@color/purple" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/DeliveryType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/DeliveryType"
+                android:textColor="@color/purple"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/conshipment" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/DeliveryType"
+                android:id="@+id/deliverylin"
+                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="horizontal">
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/Expresslin"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_8sdp"
+                    android:background="@drawable/bg_white_with_stroke"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Express"
+                        android:textColor="@color/delivery_black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:textSize="@dimen/_9sdp"
+                        android:text=" 3 hours"
+                        android:layout_gravity="center"
+                        android:textColor="@color/delivery_black"/>
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/Standardlin"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_8sdp"
+                    android:background="@drawable/bg_white_with_stroke"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Standard"
+                        android:textColor="@color/delivery_black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:textSize="@dimen/_9sdp"
+                        android:text="1 Day"
+                        android:layout_gravity="center"
+                        android:textColor="@color/delivery_black"/>
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/Customizelin"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_8sdp"
+                    android:background="@drawable/bg_white_with_stroke"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Customize"
+                        android:textColor="@color/delivery_black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:textSize="@dimen/_9sdp"
+                        android:text="Set"
+                        android:layout_gravity="center"
+                        android:textColor="@color/delivery_black"/>
+
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/weightlin"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/DeliveryType"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/weightTF"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+                    app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+                    app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+                    app:boxCornerRadiusTopStart="@dimen/_8sdp"
+                    app:boxStrokeWidth="0.7dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintEnabled="false"
+                    app:layout_constraintTop_toBottomOf="@id/additionalsLB">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="0.0"
+                        android:fontFamily="@font/manrope_medium"
+                        android:inputType="numberSigned" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/KGTF"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+                    app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+                    app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+                    app:boxCornerRadiusTopStart="@dimen/_8sdp"
+                    app:boxStrokeWidth="0.7dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintEnabled="false"
+                    app:layout_constraintTop_toBottomOf="@id/additionalsLB">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="KG"
+                        android:fontFamily="@font/manrope_medium"
+                        android:inputType="numberSigned" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <ImageView
+                app:layout_constraintTop_toTopOf="@+id/ordertxt"
+                android:id="@+id/infoimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/pinkdot"
+                app:layout_constraintEnd_toEndOf="@+id/pinkdot"
+                android:src="@drawable/ic_info_mark"/>
+
+            <TextView
+                app:layout_constraintStart_toEndOf="@+id/pinkdot"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:id="@+id/ordertxt"
+                android:layout_width="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/ordertxt"
+                android:textColor="@color/purple"
+                app:layout_constraintTop_toBottomOf="@+id/deliverylin" />
+
+
+            <Button
+                android:visibility="visible"
+                android:id="@+id/CalculateRates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:padding="@dimen/_16sdp"
+                android:stateListAnimator="@null"
+                android:text="Calculate Rates"
+                android:textAllCaps="false"
+                app:cornerRadius="@dimen/_8sdp"
+                app:elevation="0dp"
+                app:layout_constraintTop_toBottomOf="@id/ordertxt" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:visibility="gone"
+                android:id="@+id/processcon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:padding="@dimen/_16sdp"
+                app:layout_constraintTop_toBottomOf="@id/ordertxt">
+
+                <TextView
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="@string/EstimatedCost"
+                    android:textColor="@color/purple"
+                    android:id="@+id/estimatedtxt"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/estimatedtxt"
+                    app:layout_constraintEnd_toEndOf="@+id/estimatedtxt"
+                    app:layout_constraintTop_toBottomOf="@+id/estimatedtxt"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="AED 40 "
+                    android:textColor="@color/purple"
+                    android:id="@+id/estimatedCost"/>
+
+
+
+
+                <Button
+                    android:id="@+id/process"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_24sdp"
+                    android:paddingEnd="@dimen/_24sdp"
+                    android:paddingTop="@dimen/_16sdp"
+                    android:paddingBottom="@dimen/_16sdp"
+                    android:stateListAnimator="@null"
+                    android:text="Process"
+                    android:textAllCaps="false"
+                    app:cornerRadius="@dimen/_8sdp"
+                    app:elevation="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

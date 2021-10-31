@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottomSheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_16sdp"
+            app:behavior_hideable="true"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Todays Shipping Rates"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_close_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/purple" />
+
+
+            <TextView
+                android:id="@+id/ratetodaytxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="@string/rates_for_today"
+                android:textColor="@color/delivery_black"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+            <CheckBox
+                android:id="@+id/pickedup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/purple"
+                android:text="I want this shipment picked up"
+                android:textColor="@color/delivery_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ratetodaytxt" />
+
+
+            <CheckBox
+                android:id="@+id/signature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/purple"
+                android:text="@string/signatureoptions"
+                android:textColor="@color/delivery_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pickedup" />
+
+            <ImageView
+                android:id="@+id/helpsignature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:src="@drawable/ic_help"
+                app:layout_constraintBottom_toBottomOf="@+id/signature"
+                app:layout_constraintStart_toEndOf="@+id/signature"
+                app:layout_constraintTop_toTopOf="@+id/signature" />
+
+
+            <CheckBox
+                android:id="@+id/nonstandard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/purple"
+                android:text="I am shipping non-standard package (s)"
+                android:textColor="@color/delivery_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signature" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:src="@drawable/ic_help"
+                app:layout_constraintBottom_toBottomOf="@+id/nonstandard"
+                app:layout_constraintStart_toEndOf="@+id/nonstandard"
+                app:layout_constraintTop_toTopOf="@+id/nonstandard" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/shipmentsrv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintTop_toBottomOf="@+id/nonstandard"
+                tools:listitem="@layout/item_shipment_details" />
+
+            <TextView
+                android:id="@+id/detailstxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rates shown here may be different than the actual charges for your shipment. View more details."
+                android:textColor="@color/delivery_black"
+                app:layout_constraintTop_toBottomOf="@+id/shipmentsrv" />
+
+
+            <Button
+                android:id="@+id/addamount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:padding="@dimen/_16sdp"
+                android:stateListAnimator="@null"
+                android:text="Add Amount"
+                android:textAllCaps="false"
+                app:cornerRadius="@dimen/_8sdp"
+                app:elevation="0dp"
+                app:layout_constraintTop_toBottomOf="@id/detailstxt"
+                app:layout_goneMarginTop="@dimen/_16sdp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>
