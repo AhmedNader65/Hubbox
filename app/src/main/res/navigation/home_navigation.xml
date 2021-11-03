@@ -21,6 +21,11 @@
         android:label="ProfileFragment"
         tools:layout="@layout/fragment_profile" />
     <fragment
+        android:id="@+id/navigation_calculate"
+        android:name="com.hubbox.ui.home.calculate.CalculateRatesFragment"
+        android:label="calculate Fragment"
+        tools:layout="@layout/fragment_calculate_rates" />
+    <fragment
         android:id="@+id/myProfileFragment"
         tools:layout="@layout/fragment_my_profile"
         android:name="com.hubbox.ui.home.myProfile.MyProfileFragment"
@@ -89,6 +94,28 @@
     <fragment
         android:id="@+id/orderStatusFragment"
         android:name="com.hubbox.ui.home.myorders.OrderStatusFragment"
+        android:label="OrderStatusFragment" />
+
+    <fragment
+        android:id="@+id/nav_help_support"
+        android:name="com.hubbox.ui.home.profile.HelpSupportFragment"
+        android:label="OrderStatusFragment" />
+
+    <fragment
+        android:id="@+id/nav_earn_free_delivery"
+        android:name="com.hubbox.ui.home.profile.EarnFreeDelivery"
+        android:label="OrderStatusFragment" />
+    <fragment
+        android:id="@+id/nav_saved_location"
+        android:name="com.hubbox.ui.home.profile.location.SavedLocationFragment"
+        android:label="OrderStatusFragment" />
+    <fragment
+        android:id="@+id/nav_add_loca_map"
+        android:name="com.hubbox.ui.home.profile.location.FragmentNewLocation"
+        android:label="OrderStatusFragment" />
+    <fragment
+        android:id="@+id/nav_add_loca_info"
+        android:name="com.hubbox.ui.home.profile.location.FragmentLocationInfo"
         android:label="OrderStatusFragment" />
 
 </navigation>

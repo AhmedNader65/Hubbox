@@ -18,6 +18,7 @@
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/drawable/bg_white_with_stroke.xml" value="0.3828125" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/drawable/grad_btn.xml" value="0.24177631578947367" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/drawable/selector_checkbox.xml" value="0.24177631578947367" />
+        <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/bottom_sheet_cities.xml" value="0.36666666666666664" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/bottom_sheet_countriest.xml" value="0.36666666666666664" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/bottom_sheet_filter.xml" value="0.5" />
@@ -34,6 +35,7 @@
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_earn_free_delivery.xml" value="0.33" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_edit_profile.xml" value="0.28940217391304346" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_help_support.xml" value="0.25" />
+        <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_invited_people.xml" value="0.25" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_location_info.xml" value="0.18" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_login.xml" value="0.23157894736842105" />
@@ -42,9 +44,10 @@
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_new_location.xml" value="0.16" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_new_shipment.xml" value="0.23157894736842105" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_order_details.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_parent_home.xml" value="0.36666666666666664" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_pickup_address.xml" value="0.23157894736842105" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_preferences.xml" value="0.23157894736842105" />
-        <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_profile.xml" value="0.2" />
+        <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_rate.xml" value="0.25" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_saved_location.xml" value="0.16" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_send_money.xml" value="0.23157894736842105" />
@@ -68,6 +71,7 @@
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/item_service_type.xml" value="0.23157894736842105" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/item_shipment_details.xml" value="0.36666666666666664" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/item_status.xml" value="0.23157894736842105" />
+        <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/menu/bottom_menu.xml" value="0.36666666666666664" />
         <entry key="app/src/main/res/drawable/bg_grey_bottom_corner_round.xml" value="0.16196581196581197" />
         <entry key="app/src/main/res/drawable/bg_grey_top_corner_round.xml" value="0.17072072072072073" />
         <entry key="app/src/main/res/drawable/bg_top_round.xml" value="0.17072072072072073" />

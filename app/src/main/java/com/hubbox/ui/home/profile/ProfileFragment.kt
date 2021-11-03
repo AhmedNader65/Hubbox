@@ -41,6 +41,16 @@ class ProfileFragment : Fragment() {
         binding.preferences.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.refundPreferencesFragment)
         }
+//        }
+        binding.help.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.nav_help_support)
+        }
+        binding.earnFree.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.nav_earn_free_delivery)
+        }
+        binding.savedLocations.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.nav_saved_location)
+        }
 //        binding.shareApp.setOnClickListener {
 //            val intent = Intent()
 //            intent.setAction(Intent.ACTION_SEND)

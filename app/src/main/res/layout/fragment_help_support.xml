@@ -119,6 +119,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_8sdp"
                         tools:itemCount="4"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:orientation="vertical"
                         tools:listitem="@layout/item_faq" />
 
 

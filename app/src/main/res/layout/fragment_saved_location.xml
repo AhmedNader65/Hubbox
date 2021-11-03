@@ -82,6 +82,8 @@
                         android:layout_height="wrap_content"
                         tools:listitem="@layout/item_location"
                         tools:itemCount="2"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:orientation="vertical"
                         android:id="@+id/homerv"/>
 
 
@@ -115,6 +117,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         tools:listitem="@layout/item_location"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:orientation="vertical"
                         tools:itemCount="2"
                         android:id="@+id/work_rv"/>
 
@@ -132,7 +136,7 @@
 
                 <Button
                     android:layout_margin="@dimen/_12sdp"
-                    android:id="@+id/send_msg"
+                    android:id="@+id/addLocation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_32sdp"

@@ -56,4 +56,6 @@
     <string name="ArrivedON">Arrived ON</string>
     <string name="DeliveredBy">Delivered By</string>
     <string name="ShipmentDetails">Shipment Details</string>
+    <string name="title_calculate">Calculate</string>
+    <string name="more">more</string>
 </resources>
