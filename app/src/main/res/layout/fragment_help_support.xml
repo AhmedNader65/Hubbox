@@ -92,6 +92,7 @@
                             android:layout_marginStart="@dimen/_8sdp"
                             android:background="@null"
                             android:hint="Search help"
+                            android:imeOptions="actionSearch"
                             app:layout_constraintStart_toEndOf="@+id/search_img"
                             app:layout_constraintTop_toTopOf="parent" />
 

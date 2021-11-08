@@ -23,6 +23,7 @@
             android:textColor="@color/delivery_black" />
 
         <ImageView
+            android:id="@+id/minmax"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
             android:scaleType="center"

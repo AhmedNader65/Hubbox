@@ -13,6 +13,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.hubbox.R
 import com.hubbox.adapters.OrderStatusAdapter
 import com.hubbox.model.Spot
+import com.hubbox.utils.OrderStatus
 import kotlinx.android.synthetic.main.bottom_sheet_order_details.*
 import kotlinx.android.synthetic.main.fragment_order_details.*
 
@@ -86,28 +87,32 @@ class OrderStatusFragment : Fragment() {
             Spot(
                 name = "Yasaka Shrine",
                 city = "Kyoto",
-                url = "https://source.unsplash.com/Xq1ntWruZQI/600x800"
+                url = "https://source.unsplash.com/Xq1ntWruZQI/600x800",
+                orderStatus = OrderStatus.WAITING
             )
         )
         spots.add(
             Spot(
                 name = "Fushimi Inari Shrine",
                 city = "Kyoto",
-                url = "https://source.unsplash.com/NYyCqdBOKwc/600x800"
+                url = "https://source.unsplash.com/NYyCqdBOKwc/600x800",
+                orderStatus = OrderStatus.WAITING
             )
         )
         spots.add(
             Spot(
                 name = "Bamboo Forest",
                 city = "Kyoto",
-                url = "https://source.unsplash.com/buF62ewDLcQ/600x800"
+                url = "https://source.unsplash.com/buF62ewDLcQ/600x800",
+                orderStatus = OrderStatus.WAITING
             )
         )
         spots.add(
             Spot(
                 name = "Brooklyn Bridge",
                 city = "New York",
-                url = "https://source.unsplash.com/THozNzxEP3g/600x800"
+                url = "https://source.unsplash.com/THozNzxEP3g/600x800",
+                orderStatus = OrderStatus.WAITING
             )
         )
         return spots

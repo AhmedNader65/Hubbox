@@ -163,13 +163,50 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_baseline_chevron_right_24" />
                 </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/payment_cards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_8sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/savedLocations">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        app:cardBackgroundColor="#FEEDF3"
+                        app:cardCornerRadius="@dimen/_30sdp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_red_credit_card" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:text="payment cards" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_chevron_right_24" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/HubboxPay"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_8sdp"
-                    app:layout_constraintTop_toBottomOf="@+id/savedLocations">
+                    app:layout_constraintTop_toBottomOf="@+id/payment_cards">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="@dimen/_30sdp"

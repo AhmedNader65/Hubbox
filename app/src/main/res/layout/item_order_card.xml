@@ -4,127 +4,241 @@
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:paddingBottom="@dimen/_4sdp"
+        android:background="#FCFAFA"
         android:layout_height="wrap_content">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/orderCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
             app:cardCornerRadius="@dimen/_16sdp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/_8sdp">
+                android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/img24hours"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_24hours"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/orderId"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_8sdp"
-                    android:fontFamily="@font/manrope_semibold"
-                    android:text="Order Id: #d4872694"
-                    android:textColor="#4E4E4E"
-                    app:layout_constraintBottom_toBottomOf="@id/img24hours"
-                    app:layout_constraintStart_toEndOf="@id/img24hours"
-                    app:layout_constraintTop_toTopOf="@id/img24hours" />
-
-                <ImageView
-                    android:id="@+id/more"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_more_vert_24"
-                    app:layout_constraintEnd_toEndOf="parent"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/top_layout"
+                    android:layout_width="match_parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/dark_grey" />
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/orderPartnerImgContainer"
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_16sdp"
-                    app:cardCornerRadius="@dimen/_4sdp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/orderId">
+                    android:padding="@dimen/_8sdp">
 
                     <ImageView
-                        android:id="@+id/orderPartnerImg"
+                        android:id="@+id/img24hours"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/placeholder_order_partner" />
-                </androidx.cardview.widget.CardView>
+                        android:src="@drawable/ic_flame"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/orderPartnerName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_8sdp"
-                    android:alpha=".8"
-                    android:text="From: Shomokh Market"
-                    android:textColor="@color/purple"
-                    app:layout_constraintStart_toEndOf="@id/orderPartnerImgContainer"
-                    app:layout_constraintTop_toTopOf="@id/orderPartnerImgContainer" />
+                    <TextView
+                        android:id="@+id/orderId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:text="Order Id: #A4872876"
+                        android:textColor="@color/purple"
+                        app:layout_constraintBottom_toBottomOf="@id/img24hours"
+                        app:layout_constraintStart_toEndOf="@id/img24hours"
+                        app:layout_constraintTop_toTopOf="@id/img24hours" />
 
-                <TextView
-                    android:id="@+id/type"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_8sdp"
-                    android:fontFamily="@font/manrope_light"
-                    android:text="Clothes 2.5 kg"
-                    android:textColor="@color/black"
-                    app:layout_constraintStart_toEndOf="@id/orderPartnerImgContainer"
-                    app:layout_constraintTop_toBottomOf="@id/orderPartnerName" />
+                    <ImageView
+                        android:id="@+id/more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_more_vert_24"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/dark_grey" />
 
-                <ProgressBar
-                    android:id="@+id/progressBar1"
-                    style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/_30sdp"
-                    android:layout_marginTop="@dimen/_16sdp"
-                    android:layout_marginEnd="@dimen/_4sdp"
-                    android:progress="70"
-                    android:progressDrawable="@drawable/progressbar"
-                    app:layout_constraintEnd_toStartOf="@+id/progressPercent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/type" />
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/orderPartnerImgContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        app:cardCornerRadius="@dimen/_4sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/orderId">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:gravity="center"
-                    android:text="Out for Delivery"
-                    app:layout_constraintBottom_toBottomOf="@+id/progressBar1"
-                    app:layout_constraintEnd_toEndOf="@+id/progressBar1"
-                    app:layout_constraintStart_toStartOf="@+id/progressBar1"
-                    app:layout_constraintTop_toTopOf="@+id/progressBar1" />
+                        <ImageView
+                            android:id="@+id/orderPartnerImg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/placeholder_order_partner" />
+                    </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:id="@+id/progressPercent"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="90%"
-                    app:layout_constraintBottom_toBottomOf="@id/progressBar1"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/progressBar1" />
+                    <TextView
+                        android:id="@+id/orderPartnerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:alpha=".8"
+                        android:text="From: Shomokh Market"
+                        android:textColor="@color/purple"
+                        app:layout_constraintStart_toEndOf="@id/orderPartnerImgContainer"
+                        app:layout_constraintTop_toTopOf="@id/orderPartnerImgContainer" />
+
+                    <TextView
+                        android:id="@+id/type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:fontFamily="@font/manrope_light"
+                        android:text="Clothes 2.5 kg"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toEndOf="@id/orderPartnerImgContainer"
+                        app:layout_constraintTop_toBottomOf="@id/orderPartnerName" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/deliverystatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/type">
+
+
+                        <ImageView
+                            android:id="@+id/point1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_order_dot"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <ImageView
+                            android:id="@+id/point5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_order_dot"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <ImageView
+                            android:id="@+id/point3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_order_dot"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/point5"
+                            app:layout_constraintStart_toEndOf="@+id/point1"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <ImageView
+                            android:id="@+id/point2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_order_dot"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/point3"
+                            app:layout_constraintStart_toEndOf="@+id/point1"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <ImageView
+                            android:id="@+id/point4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_order_dot"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/point5"
+                            app:layout_constraintStart_toEndOf="@+id/point3"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <ImageView
+                            android:id="@+id/line1"
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:src="@drawable/ic_grey_line"
+                            android:scaleType="fitXY"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/point2"
+                            app:layout_constraintStart_toEndOf="@+id/point1"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <ImageView
+                            android:id="@+id/line2"
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:src="@drawable/ic_grey_line"
+                            android:scaleType="fitXY"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/point3"
+                            app:layout_constraintStart_toEndOf="@+id/point2"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <ImageView
+                            android:id="@+id/line3"
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:src="@drawable/ic_grey_line"
+                            android:scaleType="fitXY"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/point4"
+                            app:layout_constraintStart_toEndOf="@+id/point3"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <ImageView
+                            android:id="@+id/line4"
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:src="@drawable/ic_grey_line"
+                            android:scaleType="fitXY"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/point5"
+                            app:layout_constraintStart_toEndOf="@+id/point4"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/deliverystatustext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:fontFamily="@font/manrope_bold"
+                        android:text="picked up"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/deliverystatus" />
+
+                    <TextView
+                        android:id="@+id/deliverydate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:fontFamily="@font/manrope_light"
+                        android:text="Picked on 29 jun 2021 , 5:30 PM"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/deliverystatustext" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <LinearLayout
+                    android:paddingBottom="@dimen/_4sdp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="#FCFAFA"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    app:layout_constraintTop_toBottomOf="@id/progressBar1">
+                    app:layout_constraintTop_toBottomOf="@id/top_layout">
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -136,7 +250,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_delivering_by" />
+                            android:src="@drawable/ic_car_purple" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -150,15 +264,16 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:gravity="start"
+                        android:gravity="center"
                         android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_cost" />
+                            android:src="@drawable/ic_money" />
 
                         <TextView
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/_4sdp"
@@ -177,7 +292,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_estimated_time" />
+                            android:src="@drawable/ic_time_pink" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"

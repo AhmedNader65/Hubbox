@@ -366,12 +366,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
 
-                    <androidx.cardview.widget.CardView
+                    <com.google.android.material.card.MaterialCardView
+                        app:strokeWidth="0dp"
                         android:id="@+id/document"
                         android:layout_width="@dimen/_65sdp"
                         android:layout_height="@dimen/_60sdp"
                         android:layout_marginTop="@dimen/_8sdp"
-                        app:cardBackgroundColor="#E7FCFF"
+                        app:cardBackgroundColor="@color/greenlight"
                         app:cardCornerRadius="@dimen/_8sdp"
                         app:cardElevation="0dp"
                         app:contentPadding="@dimen/_8sdp">
@@ -395,7 +396,7 @@
                                 android:text="Doc"
                                 android:textColor="@color/purple" />
                         </LinearLayout>
-                    </androidx.cardview.widget.CardView>
+                    </com.google.android.material.card.MaterialCardView>
 
                 </LinearLayout>
 
@@ -404,12 +405,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/office"
+                    <com.google.android.material.card.MaterialCardView
+                        app:strokeWidth="0dp"
+                        android:id="@+id/parcell"
                         android:layout_width="@dimen/_65sdp"
                         android:layout_height="@dimen/_60sdp"
                         android:layout_marginTop="@dimen/_8sdp"
-                        app:cardBackgroundColor="#F5F2FF"
+                        app:cardBackgroundColor="@color/purplelight"
                         app:cardCornerRadius="@dimen/_8sdp"
                         app:cardElevation="0dp"
                         app:contentPadding="@dimen/_8sdp"
@@ -436,7 +438,7 @@
                                 android:text="Parcel"
                                 android:textColor="@color/purple" />
                         </LinearLayout>
-                    </androidx.cardview.widget.CardView>
+                    </com.google.android.material.card.MaterialCardView>
                 </LinearLayout>
 
                 <LinearLayout
@@ -444,12 +446,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/more"
+                    <com.google.android.material.card.MaterialCardView
+                        app:strokeWidth="0dp"
+                        android:id="@+id/recovery"
                         android:layout_width="@dimen/_65sdp"
                         android:layout_height="@dimen/_60sdp"
                         android:layout_marginTop="@dimen/_8sdp"
-                        app:cardBackgroundColor="#FEEDF3"
+                        app:cardBackgroundColor="@color/pinklight"
                         app:cardCornerRadius="@dimen/_8sdp"
                         app:cardElevation="0dp"
                         app:contentPadding="@dimen/_8sdp">
@@ -471,9 +474,10 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Recovery"
+                                android:maxLines="1"
                                 android:textColor="@color/purple" />
                         </LinearLayout>
-                    </androidx.cardview.widget.CardView>
+                    </com.google.android.material.card.MaterialCardView>
 
                 </LinearLayout>
 
@@ -482,12 +486,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
-                    <androidx.cardview.widget.CardView
+                    <com.google.android.material.card.MaterialCardView
                         android:id="@+id/Moving"
                         android:layout_width="@dimen/_65sdp"
                         android:layout_height="@dimen/_60sdp"
                         android:layout_marginTop="@dimen/_8sdp"
-                        app:cardBackgroundColor="#FFF1EB"
+                        app:strokeWidth="0dp"
+                        app:cardBackgroundColor="@color/orangelight"
                         app:cardCornerRadius="@dimen/_8sdp"
                         app:cardElevation="0dp"
                         app:contentPadding="@dimen/_8sdp"
@@ -514,7 +519,7 @@
                                 android:text="Moving"
                                 android:textColor="@color/purple" />
                         </LinearLayout>
-                    </androidx.cardview.widget.CardView>
+                    </com.google.android.material.card.MaterialCardView>
                 </LinearLayout>
 
 
@@ -557,6 +562,7 @@
 
 
                     <TextView
+                        android:id="@+id/exptitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -564,6 +570,7 @@
                         android:textColor="@color/delivery_black"/>
 
                     <TextView
+                        android:id="@+id/expdesc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
@@ -588,6 +595,7 @@
 
 
                     <TextView
+                        android:id="@+id/standardtxt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -595,6 +603,7 @@
                         android:textColor="@color/delivery_black"/>
 
                     <TextView
+                        android:id="@+id/standarddesc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
@@ -619,6 +628,7 @@
 
 
                     <TextView
+                        android:id="@+id/customizetxt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -626,6 +636,7 @@
                         android:textColor="@color/delivery_black"/>
 
                     <TextView
+                        android:id="@+id/customizedesc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"

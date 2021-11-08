@@ -195,6 +195,7 @@
                         android:fontFamily="@font/manrope_extrabold"
                         android:hint="e.g.  Opposite NMC Hospital"
                         android:inputType="text"
+                        android:imeOptions="actionDone"
                         android:textColor="@color/purple" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -214,8 +215,10 @@
                     app:layoutDescription="@xml/fragment_pickup_address_scene"
                     app:layout_constraintTop_toBottomOf="@id/savLocation">
 
-                    <androidx.cardview.widget.CardView
+                    <com.google.android.material.card.MaterialCardView
                         android:id="@+id/home"
+                        app:strokeWidth="0.6dp"
+                        app:strokeColor="@color/colorLightGrey"
                         android:layout_width="@dimen/_65sdp"
                         android:layout_height="@dimen/_60sdp"
                         android:layout_marginTop="@dimen/_8sdp"
@@ -236,22 +239,28 @@
                             android:orientation="vertical">
 
                             <ImageView
+                                android:id="@+id/homeimg"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/ic_home_purple"
                                 app:tint="@color/grey_70" />
 
                             <TextView
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:id="@+id/hometxt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Home"
                                 android:textColor="@color/delivery_black" />
                         </LinearLayout>
-                    </androidx.cardview.widget.CardView>
+                    </com.google.android.material.card.MaterialCardView>
 
 
-                    <androidx.cardview.widget.CardView
+                    <com.google.android.material.card.MaterialCardView
                         android:id="@+id/more"
+
+                        app:strokeWidth="0.6dp"
+                        app:strokeColor="@color/colorLightGrey"
                         android:layout_width="@dimen/_65sdp"
                         android:layout_height="@dimen/_60sdp"
                         android:layout_marginTop="@dimen/_8sdp"
@@ -272,21 +281,26 @@
                             android:orientation="vertical">
 
                             <ImageView
+                                android:id="@+id/othersimg"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/ic_baseline_more_horiz_24"
                                 app:tint="@color/grey_70" />
 
                             <TextView
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:id="@+id/otherstxt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Other"
                                 android:textColor="@color/delivery_black" />
                         </LinearLayout>
-                    </androidx.cardview.widget.CardView>
+                    </com.google.android.material.card.MaterialCardView>
 
-                    <androidx.cardview.widget.CardView
+                    <com.google.android.material.card.MaterialCardView
                         android:id="@+id/office"
+                        app:strokeWidth="0.6dp"
+                        app:strokeColor="@color/colorLightGrey"
                         android:layout_width="@dimen/_65sdp"
                         android:layout_height="@dimen/_60sdp"
                         android:layout_marginTop="@dimen/_8sdp"
@@ -307,18 +321,21 @@
                             android:orientation="vertical">
 
                             <ImageView
+                                android:id="@+id/workimg"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/ic_work"
                                 app:tint="@color/grey_70" />
 
                             <TextView
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:id="@+id/worktxt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Work"
                                 android:textColor="@color/delivery_black" />
                         </LinearLayout>
-                    </androidx.cardview.widget.CardView>
+                    </com.google.android.material.card.MaterialCardView>
                 </androidx.constraintlayout.motion.widget.MotionLayout>
 
 

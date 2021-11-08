@@ -13,7 +13,7 @@ class OrderStackAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        return ViewHolder(inflater.inflate(R.layout.item_order_card, parent, false))
+        return ViewHolder(inflater.inflate(R.layout.item_home_orders, parent, false))
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

@@ -1,111 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="@dimen/_8sdp"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/deliveryinfo1"
-        android:orientation="horizontal">
+    <data>
 
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ArrivedON"
-                android:textColor="@color/purple"
-                android:fontFamily="@font/manrope_medium"/>
-
-
-            <TextView
-                android:layout_marginTop="@dimen/_8sdp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sat, Jun 26"
-                android:id="@+id/deliverydate"
-                android:fontFamily="@font/manrope_medium"/>
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/DeliveredBy"
-                android:textColor="@color/purple"
-                android:fontFamily="@font/manrope_medium"/>
-
-
-            <TextView
-                android:layout_marginTop="@dimen/_8sdp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="8:00 PM"
-                android:id="@+id/deliverytime"
-                android:fontFamily="@font/manrope_medium"/>
-
-
-            <TextView
-                android:layout_marginTop="@dimen/_8sdp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Delivery Priority Overnight"
-                android:id="@+id/deliverypriority"
-                android:fontFamily="@font/manrope_medium"/>
-
-
-
-
-        </LinearLayout>
-    </LinearLayout>
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_8sdp"
-        android:background="@drawable/bg_round_small_rad_lavandar_light"
-        app:layout_constraintTop_toBottomOf="@+id/deliveryinfo1">
+        android:layout_margin="@dimen/_8sdp">
 
-
-        <TextView
-            android:id="@+id/price"
-            android:padding="@dimen/_8sdp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:textSize="@dimen/_13sdp"
-            android:text="AED 240"
-            android:textColor="@color/purple"/>
-
-        <ImageView
-            android:paddingEnd="@dimen/_8sdp"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/downarrow"
-            android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:tint="@color/purple" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:id="@+id/deliveryinfo1"
+            android:orientation="horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ArrivedON"
+                    android:textColor="@color/purple"
+                    android:fontFamily="@font/manrope_medium" />
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sat, Jun 26"
+                    android:id="@+id/deliverydate"
+                    android:fontFamily="@font/manrope_medium" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/DeliveredBy"
+                    android:textColor="@color/purple"
+                    android:fontFamily="@font/manrope_medium" />
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8:00 PM"
+                    android:id="@+id/deliverytime"
+                    android:fontFamily="@font/manrope_medium" />
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery Priority Overnight"
+                    android:id="@+id/deliverypriority"
+                    android:fontFamily="@font/manrope_medium" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:background="@drawable/bg_round_small_rad_lavandar_light"
+            app:layout_constraintTop_toBottomOf="@+id/deliveryinfo1">
+
+
+            <TextView
+                android:id="@+id/price"
+                android:padding="@dimen/_8sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="@dimen/_13sdp"
+                android:text="AED 240"
+                android:textColor="@color/purple" />
+
+            <ImageView
+                android:paddingEnd="@dimen/_8sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/downarrow"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:tint="@color/purple" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

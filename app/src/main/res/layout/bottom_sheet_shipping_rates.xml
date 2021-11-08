@@ -105,6 +105,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintTop_toBottomOf="@+id/nonstandard"
                 tools:listitem="@layout/item_shipment_details" />
 
@@ -118,13 +120,13 @@
 
 
             <Button
-                android:id="@+id/addamount"
+                android:id="@+id/calculateagain"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_16sdp"
                 android:padding="@dimen/_16sdp"
                 android:stateListAnimator="@null"
-                android:text="Add Amount"
+                android:text="Calculate Again"
                 android:textAllCaps="false"
                 app:cornerRadius="@dimen/_8sdp"
                 app:elevation="0dp"

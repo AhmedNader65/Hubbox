@@ -117,5 +117,21 @@
         android:id="@+id/nav_add_loca_info"
         android:name="com.hubbox.ui.home.profile.location.FragmentLocationInfo"
         android:label="OrderStatusFragment" />
+    <fragment
+        android:id="@+id/nav_calculate_rate"
+        android:name="com.hubbox.ui.home.calculate.RateFragment"
+        android:label="RateFragment" />
+    <fragment
+        android:id="@+id/nav_my_wallet"
+        android:name="com.hubbox.ui.home.paymentCards.MyWalletFragment"
+        android:label="RateFragment" />
+    <fragment
+        android:id="@+id/nav_send_money"
+        android:name="com.hubbox.ui.home.paymentCards.SendMoneyFragment"
+        android:label="RateFragment" />
+    <fragment
+        android:id="@+id/nav_payment_cards"
+        android:name="com.hubbox.ui.home.paymentCards.CreditCardsDisplayFragment"
+        android:label="RateFragment" />
 
 </navigation>

@@ -35,9 +35,12 @@ class ProfileFragment : Fragment() {
         binding.myProfile.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.myProfileFragment)
         }
-//        binding.paymentCards.setOnClickListener {
-//            Navigation.findNavController(it).navigate(R.id.paymentCardsFragment)
-//        }
+        binding.paymentCards.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.paymentCardsFragment)
+        }
+        binding.HubboxPay.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.nav_my_wallet)
+        }
         binding.preferences.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.refundPreferencesFragment)
         }

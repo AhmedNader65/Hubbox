@@ -35,6 +35,7 @@ class ParentHomeFragment : Fragment() {
                 R.id.navigation_home -> binding.root.setBackgroundResource(R.color.lavendar)
                 R.id.navigation_my_orders -> binding.root.setBackgroundResource(R.color.my_orders_bg)
                 R.id.navigation_profile -> binding.root.setBackgroundResource(R.color.white)
+                R.id.navigation_calculate -> binding.root.setBackgroundResource(R.color.white)
                 else -> binding.botttomNavigation.visibility = GONE
             }
         }
