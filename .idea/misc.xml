@@ -9,15 +9,18 @@
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/drawable-ldpi/bg_round_purple.xml" value="0.24177631578947367" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/drawable-ldpi/bg_round_small_rad_lavandar_light.xml" value="0.24177631578947367" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/drawable-ldpi/bg_round_stroke_grey.xml" value="0.24177631578947367" />
+        <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.22135416666666666" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/drawable/bg_round_grey_stroke.xml" value="0.3828125" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/drawable/bg_round_purple_dark.xml" value="0.3828125" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/drawable/bg_round_purple_light.xml" value="0.3828125" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/drawable/bg_round_purple_small_rad.xml" value="0.3828125" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/drawable/bg_top_round.xml" value="0.3828125" />
+        <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/drawable/bg_top_round_lavandar.xml" value="0.3828125" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/drawable/bg_top_round_white.xml" value="0.3828125" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/drawable/bg_white_corner_round.xml" value="0.3828125" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/drawable/bg_white_with_stroke.xml" value="0.3828125" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/drawable/grad_btn.xml" value="0.24177631578947367" />
+        <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22135416666666666" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/drawable/selector_checkbox.xml" value="0.24177631578947367" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/bottom_sheet_cities.xml" value="0.36666666666666664" />
@@ -36,7 +39,7 @@
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_earn_free_delivery.xml" value="0.33" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_edit_profile.xml" value="0.28940217391304346" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_help_support.xml" value="0.25" />
-        <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
+        <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_invited_people.xml" value="0.25" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_location_info.xml" value="0.38402457757296465" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/fragment_login.xml" value="0.23157894736842105" />
@@ -67,7 +70,7 @@
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/item_invitation.xml" value="0.25" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/item_location.xml" value="0.2" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/item_notification.xml" value="0.23157894736842105" />
-        <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/item_order_card.xml" value="0.67" />
+        <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/item_order_card.xml" value="0.18" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/item_other_orders.xml" value="0.23157894736842105" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/item_payment_cards.xml" value="0.33" />
         <entry key="..\:/Android studio projects/Hubbox/app/src/main/res/layout/item_service_type.xml" value="0.23157894736842105" />
