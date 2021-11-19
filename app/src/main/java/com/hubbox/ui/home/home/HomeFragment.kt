@@ -17,6 +17,7 @@ import com.hubbox.databinding.FragmentHomeBinding
 import com.hubbox.model.Spot
 import com.hubbox.utils.OrderStatus
 import com.yuyakaido.android.cardstackview.*
+import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 
 
 class HomeFragment : Fragment(), CardStackListener, OrderStackAdapter.OnOrderInteract {
@@ -41,7 +42,39 @@ class HomeFragment : Fragment(), CardStackListener, OrderStackAdapter.OnOrderInt
             Navigation.findNavController(it).navigate(R.id.notificationFragment)
         }
         initialize()
+        setupAdBanner()
         return mRootView
+    }
+
+    private fun setupAdBanner() {
+
+        val list = mutableListOf<CarouselItem>()
+        list.add(
+            CarouselItem(
+                imageDrawable = R.drawable.placeholder_ad_banner,
+               caption = null
+            )
+        )
+
+        list.add(
+            CarouselItem(
+                imageDrawable = R.drawable.placeholder_ad_banner,
+               caption = null
+            )
+        )
+        list.add(
+            CarouselItem(
+                imageDrawable = R.drawable.placeholder_ad_banner,
+               caption = null
+            )
+        )
+        list.add(
+            CarouselItem(
+                imageDrawable = R.drawable.placeholder_ad_banner,
+               caption = null
+            )
+        )
+        binding.carousel.setData(list)
     }
 
     private fun initialize() {

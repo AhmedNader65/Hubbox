@@ -27,6 +27,12 @@ import com.hubbox.databinding.*
 import com.hubbox.model.Day
 import com.hubbox.model.Spot
 import com.hubbox.model.Vehicle
+import android.text.Editable
+
+import android.text.TextWatcher
+
+
+
 
 
 class ShipmentConfirmationFragment : Fragment() {
@@ -39,10 +45,39 @@ class ShipmentConfirmationFragment : Fragment() {
         // Inflate the layout for this fragment
 
         binding =
-            DataBindingUtil.inflate(inflater, R.layout.fragment_shipment_confirmation, container, false)
+            DataBindingUtil.inflate(
+                inflater,
+                R.layout.fragment_shipment_confirmation,
+                container,
+                false
+            )
         val mRootView = binding.getRoot()
 
         return mRootView
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.plusimg.setOnClickListener({
+            binding.addresscon.visibility = View.VISIBLE
+            binding.plusimg.visibility=View.GONE
+            binding.minusimg.visibility=View.VISIBLE
+        })
+        binding.minusimg.setOnClickListener({
+            binding.addresscon.visibility = View.GONE
+            binding.plusimg.visibility=View.VISIBLE
+            binding.minusimg.visibility=View.GONE
+        })
+
+
+        binding.promocode.addTextChangedListener(object : TextWatcher {
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
+                binding.applyPromo.isEnabled=true
+            }
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
+            override fun afterTextChanged(s: Editable) {
+               binding.applyPromo.isEnabled=true
+            }
+        })
+    }
 }

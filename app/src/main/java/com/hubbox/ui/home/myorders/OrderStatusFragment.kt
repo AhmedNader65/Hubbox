@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.hubbox.R
 import com.hubbox.adapters.OrderStatusAdapter
@@ -35,6 +36,9 @@ class OrderStatusFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         orderStatusList.adapter = OrderStatusAdapter(createSpots())
+        qrcode.setOnClickListener({
+            Navigation.findNavController(it).navigate(R.id.nav_qr_code)
+        })
 
         bottomSheetBehavior = BottomSheetBehavior.from(bottomSheetConst)
         //#3 Listening to State Changes of BottomSheet

@@ -133,5 +133,9 @@
         android:id="@+id/nav_payment_cards"
         android:name="com.hubbox.ui.home.paymentCards.CreditCardsDisplayFragment"
         android:label="RateFragment" />
+    <fragment
+        android:id="@+id/nav_qr_code"
+        android:name="com.hubbox.ui.home.myorders.OrderQrCcodeFragment"
+        android:label="RateFragment" />
 
 </navigation>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
@@ -362,6 +363,23 @@
                     android:layout_marginTop="@dimen/_5sdp"
                     android:clipToPadding="true"
                     app:layout_constraintTop_toBottomOf="@id/ordersInfo"></com.yuyakaido.android.cardstackview.CardStackView>
+
+                <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                    app:layout_constraintTop_toBottomOf="@+id/card_stack_view"
+                    android:id="@+id/carousel"
+                    android:layout_width="match_parent"
+                    app:showCaption="false"
+                    app:showIndicator="true"
+                    app:autoPlay="false"
+                    app:carouselType="BLOCK"
+                    app:showTopShadow="false"
+
+                    app:showBottomShadow="false"
+                    app:carouselGravity="CENTER"
+                    app:showNavigationButtons="false"
+                    app:imageScaleType="fitXY"
+                    app:imagePlaceholder="@drawable/placeholder_ad_banner"
+                    android:layout_height="@dimen/_120sdp" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

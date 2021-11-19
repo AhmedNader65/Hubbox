@@ -136,7 +136,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_delivering_by" />
+                            android:src="@drawable/ic_car_purple" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -156,13 +156,14 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_cost" />
+                            android:src="@drawable/ic_money" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/_4sdp"
                             android:fontFamily="@font/manrope_extrabold"
+                            android:layout_gravity="center_vertical"
                             android:text="600 AED"
                             app:autoSizeTextType="uniform" />
                     </LinearLayout>
@@ -177,7 +178,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_estimated_time" />
+                            android:src="@drawable/ic_time_pink" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"

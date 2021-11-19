@@ -128,16 +128,16 @@
 
                     <com.google.android.material.switchmaterial.SwitchMaterial
                         android:id="@+id/switchdefault"
-                        style="@style/TextAppearance.AppCompat.Small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checked="true"
                         android:text="Default"
                         android:textColor="@color/white"
+
+                        app:trackTint="@color/switch_track_selector"
+                        app:thumbTint="@color/switch_thumb_selector"
                         app:layout_constraintStart_toStartOf="@+id/holder"
-                        app:layout_constraintTop_toBottomOf="@+id/holder"
-                        app:thumbTint="@color/purple"
-                        app:trackTint="#DBDBDB" />
+                        app:layout_constraintTop_toBottomOf="@+id/holder" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -145,7 +145,7 @@
                         android:src="@drawable/ic_wallet_lock"
                         app:layout_constraintBottom_toBottomOf="@+id/switchdefault"
                         app:layout_constraintEnd_toEndOf="@+id/delete"
-                        app:layout_constraintTop_toTopOf="@+id/switchdefault"/>
+                        app:layout_constraintTop_toTopOf="@+id/switchdefault" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </FrameLayout>
         </androidx.cardview.widget.CardView>

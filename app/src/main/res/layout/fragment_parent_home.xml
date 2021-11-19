@@ -24,6 +24,7 @@
             android:id="@+id/botttom_navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:labelVisibilityMode="labeled"
             android:padding="@dimen/_12sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:menu="@menu/bottom_menu" />

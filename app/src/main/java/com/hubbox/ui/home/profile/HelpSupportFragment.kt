@@ -14,6 +14,9 @@ import com.hubbox.model.HomeAddress
 import kotlinx.android.synthetic.main.fragment_help_support.*
 import kotlinx.android.synthetic.main.fragment_saved_location.*
 import kotlinx.android.synthetic.main.fragment_saved_location.homerv
+import android.content.Intent
+import android.net.Uri
+
 
 class HelpSupportFragment : Fragment() {
     lateinit var faq: java.util.ArrayList<FAQ>
@@ -32,5 +35,14 @@ class HelpSupportFragment : Fragment() {
         faq.add(FAQ("a",""))
         faq.add(FAQ("a",""))
         faqrv.adapter= FAQAdapter(faq)
+        send_msg.setOnClickListener({
+            val emailIntent = Intent(
+                Intent.ACTION_SENDTO, Uri.fromParts(
+                    "mailto", "yourCompany@gmail.com", null
+                )
+            )
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Inquiry About")
+            requireContext().startActivity(Intent.createChooser(emailIntent, null))
+        })
     }
 }
